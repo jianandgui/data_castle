@@ -19,4 +19,11 @@
         SET enable=1
         WHERE mail=#{mail}
     </update>
+
+    <select id="getUser" parameterType="String" resultType="cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo">
+        SELECT * FROM user_info
+        WHERE mail=#{mail}
+    </select>
+
+
 </mapper>

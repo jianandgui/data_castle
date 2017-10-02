@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface UserDao {
 
     int addUser(UserInfo userInfo);
-
     int updateUserEnable(String mail);
-
+    UserInfo getUser(String mail);
 }

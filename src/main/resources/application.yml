@@ -18,6 +18,8 @@ spring:
        starttls:
                  enable: true
                  required: true
+
+
 mybatis:
   type-aliases-package: cn.edu.swpu.cins.data_castle.entity
   mapper-locations: classpath:mapper/*.xml
@@ -26,3 +28,12 @@ mybatis:
     use-column-label: true
     map-underscore-to-camel-case: true
 
+############## Data_Castle Config ##############
+
+data_castle:
+   server:
+     host: 127.0.0.1
+     port: 8796
+   path:
+        user:
+           enable: dataCastle/user/enable
