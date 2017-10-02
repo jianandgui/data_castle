@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.swpu.cins.data_castle.dao.UserDao">
+
+    <insert id="addUser" parameterType="cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo">
+        INSERT INTO
+        user_info
+        (username,pwd,mail)
+        VALUE
+        (#{username},#{pwd},#{mail})
+    </insert>
+
+    <update id="updateUserEnable" parameterType="String">
+
+        UPDATE user_info
+        SET enable=1
+        WHERE mail=#{mail}
+    </update>
+</mapper>

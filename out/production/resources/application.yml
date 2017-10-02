@@ -1,0 +1,28 @@
+server:
+  port: 8796
+
+spring:
+  datasource:
+    password: 1111
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cins_data_castle?verifyServerCertificate=false&useSSL=true&useUnicode=true&characterEncoding=utf8
+  mail:
+    host: smtp.163.com
+    password: Bangnicayanlei59
+    username: yangquan95@163.com
+    properties:
+     mail:
+      smtp:
+       auth:
+       starttls:
+                 enable: true
+                 required: true
+mybatis:
+  type-aliases-package: cn.edu.swpu.cins.data_castle.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    cache-enabled: true
+    use-column-label: true
+    map-underscore-to-camel-case: true
+
