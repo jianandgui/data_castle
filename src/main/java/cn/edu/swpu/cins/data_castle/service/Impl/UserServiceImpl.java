@@ -2,6 +2,7 @@ package cn.edu.swpu.cins.data_castle.service.Impl;
 
 import cn.edu.swpu.cins.data_castle.dao.UserDao;
 import cn.edu.swpu.cins.data_castle.entity.dto.SignInUser;
+import cn.edu.swpu.cins.data_castle.entity.dto.SignUp;
 import cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult;
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
 import cn.edu.swpu.cins.data_castle.exception.OperationFailureException;
@@ -31,7 +32,17 @@ public class UserServiceImpl implements UserService{
 
 
     @Override
-    public int insertUser(UserInfo userInfo) throws MessagingException {
+    public int insertUser(SignUp signUp,String code) throws MessagingException {
+        UserInfo userInfo = signUp.getUserInfo();
+
+        String verifyKey = code;
+        if (!jedisAdapter.exists(verifyKey)) {
+            throw new UserException("请重新获取验证码", HttpStatus.FORBIDDEN);
+        }
+        if (!jedisAdapter.get(verifyKey).equals(signUp.getVerifyCode())) {
+            throw new UserException("验证码错误请重新输入", HttpStatus.FORBIDDEN);
+        }
+
         String key = RedisKey.getDatacastleRegister(userInfo.getMail());
         String token = UUID.randomUUID().toString();
         jedisAdapter.setex(key, 3, token);
@@ -61,7 +72,15 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public UserSignResult userLogin(SignInUser signInUser) {
+    public UserSignResult userLogin(SignInUser signInUser,String captchaCode) {
+
+        String verifyKey = captchaCode;
+        if (!jedisAdapter.exists(verifyKey)) {
+            throw new UserException("请重新获取验证码", HttpStatus.FORBIDDEN);
+        }
+        if (!jedisAdapter.get(verifyKey).equals(signInUser.getVerifyCode())) {
+            throw new UserException("验证码错误请重新输入", HttpStatus.FORBIDDEN);
+        }
         UserInfo user = userDao.getUser(signInUser.getEmail());
         if (user.getEnable() != 1) {
             throw new UserException("尚未激活，请激活后使用", HttpStatus.FORBIDDEN);
