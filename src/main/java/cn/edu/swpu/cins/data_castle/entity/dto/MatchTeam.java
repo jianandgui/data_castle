@@ -4,11 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class SignInUser {
-    private String pwd;
-    private String mail;
-    private String verifyCode;
+public class MatchTeam {
+    private String teamName;
+    private List<String> teamerMail;
 }

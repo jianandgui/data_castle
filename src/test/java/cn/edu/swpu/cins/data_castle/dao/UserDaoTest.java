@@ -27,8 +27,11 @@ public class UserDaoTest {
     }
 
     @Test
-    public void updateUserEnable() throws Exception {
-        System.out.println(userDao.updateUserEnable("test"));
+    public void updateUser() throws Exception {
+//        System.out.println(userDao.updateUserEnable("test"));
+        String mail = "879604213@qq.com";
+        int flag = 789;
+        userDao.updateUser(mail, flag);
     }
 
 }

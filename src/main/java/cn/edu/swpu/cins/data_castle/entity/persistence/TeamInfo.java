@@ -17,8 +17,7 @@ public class TeamInfo {
         return this;
     }
 
-    public TeamInfo setTeamName(String teamName) {
+    public void setTeamName(String teamName) {
         this.teamName = teamName;
-        return this;
     }
 }

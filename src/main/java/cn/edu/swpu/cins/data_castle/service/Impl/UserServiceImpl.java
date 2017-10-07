@@ -68,7 +68,7 @@ public class UserServiceImpl implements UserService{
         if (!jedisAdapter.get(key).equals(Ttoken)) {
             throw new OperationFailureException("token验证失败", HttpStatus.FORBIDDEN);
         }
-        return userDao.updateUserEnable(Tmail);
+        return userDao.updateUser(Tmail,0);
     }
 
     @Override
@@ -81,21 +81,22 @@ public class UserServiceImpl implements UserService{
         if (!jedisAdapter.get(verifyKey).equals(signInUser.getVerifyCode())) {
             throw new UserException("验证码错误请重新输入", HttpStatus.FORBIDDEN);
         }
-        UserInfo user = userDao.getUser(signInUser.getEmail());
+        UserInfo user = userDao.getUser(signInUser.getMail());
         if (user.getEnable() != 1) {
             throw new UserException("尚未激活，请激活后使用", HttpStatus.FORBIDDEN);
         }
         if (signInUser == null || user == null) {
             throw new UserException("没有该用户，请核对信息后登录", HttpStatus.FORBIDDEN);
         }
-        if (!passwordEncoderService.match(signInUser.getPassword(), user.getPwd())) {
+        if (!passwordEncoderService.match(signInUser.getPwd(), user.getPwd())) {
             throw new UserException("密码不正确", HttpStatus.FORBIDDEN);
         }
         //将用户加入缓存
         String token = UUID.randomUUID().toString();
+        String encoderToken = passwordEncoderService.encode(token);
         String mail = user.getMail();
         String key = RedisKey.getDatacastleLogin(mail);
-        jedisAdapter.setex(key, 86400, token);
+        jedisAdapter.setex(key, 86400, encoderToken);
         return new UserSignResult(token, mail);
     }
 }

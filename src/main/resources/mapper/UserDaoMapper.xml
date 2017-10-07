@@ -13,10 +13,15 @@
         (#{username},#{pwd},#{mail})
     </insert>
 
-    <update id="updateUserEnable" parameterType="String">
+    <update id="updateUser">
 
         UPDATE user_info
+        <if test="flag==0">
         SET enable=1
+        </if>
+        <if test="flag!=0">
+        SET t_id=#{flag}
+        </if>
         WHERE mail=#{mail}
     </update>
 

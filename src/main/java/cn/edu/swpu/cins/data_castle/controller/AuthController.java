@@ -5,7 +5,6 @@ import cn.apiclub.captcha.backgrounds.GradiatedBackgroundProducer;
 import cn.apiclub.captcha.gimpy.FishEyeGimpyRenderer;
 import cn.edu.swpu.cins.data_castle.entity.dto.SignInUser;
 import cn.edu.swpu.cins.data_castle.entity.dto.SignUp;
-import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
 import cn.edu.swpu.cins.data_castle.service.UserService;
 import cn.edu.swpu.cins.data_castle.utils.JedisAdapter;
 import lombok.AllArgsConstructor;
@@ -42,7 +41,7 @@ public class AuthController {
      * @return
      */
     //, produces = MediaType.IMAGE_PNG_VALUE
-    @GetMapping(value = "/getVerifyCode")
+    @GetMapping(value = "verifyCode")
     public ResponseEntity getVerifyCodeForLogin(HttpServletResponse response) {
 
         BASE64Encoder encoder = new BASE64Encoder();
@@ -85,8 +84,8 @@ public class AuthController {
 
     @PostMapping("signIn")
     public ResponseEntity userLogin(@RequestBody SignInUser signInUser, @RequestHeader("captcha-code") String captchaCode) {
-        userService.userLogin(signInUser, captchaCode);
-        return new ResponseEntity("", HttpStatus.OK);
+
+        return new ResponseEntity(userService.userLogin(signInUser, captchaCode), HttpStatus.OK);
     }
 
     @GetMapping("enable")

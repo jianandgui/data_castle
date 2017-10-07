@@ -37,3 +37,6 @@ data_castle:
    path:
         user:
            enable: dataCastle/user/enable
+security:
+  basic:
+    enabled: false
