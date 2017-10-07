@@ -13,15 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Component
+@AllArgsConstructor
 public class TokenFilter implements HandlerInterceptor{
     private JedisAdapter jedisAdapter;
     private PasswordEncoderService passwordEncoderService;
 
-    @Autowired
-    public TokenFilter(JedisAdapter jedisAdapter, PasswordEncoderService passwordEncoderService) {
-        this.jedisAdapter = jedisAdapter;
-        this.passwordEncoderService = passwordEncoderService;
-    }
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -33,10 +29,10 @@ public class TokenFilter implements HandlerInterceptor{
         String key = RedisKey.getDatacastleLogin(mail);
         String Rtoken = jedisAdapter.get(key);
 
-        if (passwordEncoderService.match(token,Rtoken) || jedisAdapter.get(key) == null) {
+        if (!passwordEncoderService.match(token,Rtoken) || jedisAdapter.get(key) == null) {
             return forbidden(response);
         }
-        return false;
+        return true;
     }
 
     private boolean forbidden(HttpServletResponse response) {

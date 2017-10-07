@@ -1,7 +1,6 @@
 package cn.edu.swpu.cins.data_castle.entity.persistence;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

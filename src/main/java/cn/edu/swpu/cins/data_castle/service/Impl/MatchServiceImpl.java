@@ -5,19 +5,35 @@ import cn.edu.swpu.cins.data_castle.dao.UserDao;
 import cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam;
 import cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo;
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
+import cn.edu.swpu.cins.data_castle.exception.FileException;
 import cn.edu.swpu.cins.data_castle.exception.MatchException;
 import cn.edu.swpu.cins.data_castle.service.MatchService;
-import lombok.AllArgsConstructor;
+import cn.edu.swpu.cins.data_castle.service.TimeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
 public class MatchServiceImpl implements MatchService {
     private UserDao userDao;
     private MatchDao marchDao;
+    @Value("${data_castle.answer.location}")
+    private String location;
+    private TimeService timeService;
+
+    @Autowired
+    public MatchServiceImpl(UserDao userDao, MatchDao marchDao, TimeService timeService) {
+        this.userDao = userDao;
+        this.marchDao = marchDao;
+        this.timeService = timeService;
+    }
+
     @Override
     public int addTeam(MatchTeam matchTeam) {
         List<String> mails = matchTeam.getTeamerMail();
@@ -30,7 +46,7 @@ public class MatchServiceImpl implements MatchService {
         UserInfo user = null;
         for (String mail : mails) {
             user = userDao.getUser(mail);
-            if (user.getTeamId()!=null) {
+            if (user.getTeamId() != 0) {
                 joinCount++;
             }
             if (user.getEnable() == 0) {
@@ -50,5 +66,31 @@ public class MatchServiceImpl implements MatchService {
             userDao.updateUser(mail, teamId);
         }
         return 1;
+    }
+
+    @Override
+    public boolean saveFile(MultipartFile multipartFile, String mail) {
+        int teamId = userDao.getUser(mail).getTeamId();
+
+        String path = checkDir(teamId);
+        path += "/" + timeService.getDate();
+        File file = new File(path);
+        try {
+            multipartFile.transferTo(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+    private String checkDir(int teamId) {
+        String path = location + "/" + teamId;
+        File dir = new File(path);
+        if (!dir.exists()) {
+            if (!dir.mkdirs()) {
+                throw new FileException("create dir failed", HttpStatus.BAD_REQUEST);
+            }
+        }
+        return path;
     }
 }

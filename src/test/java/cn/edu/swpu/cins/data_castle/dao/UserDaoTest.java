@@ -14,6 +14,12 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class UserDaoTest {
+    @Test
+    public void getUser() throws Exception {
+        UserInfo user = userDao.getUser("879604213@qq.com");
+        System.out.println(user.getTeamId());
+
+    }
 
     @Resource
     private UserDao userDao;

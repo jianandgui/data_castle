@@ -96,7 +96,7 @@ public class UserServiceImpl implements UserService{
         String encoderToken = passwordEncoderService.encode(token);
         String mail = user.getMail();
         String key = RedisKey.getDatacastleLogin(mail);
-        jedisAdapter.setex(key, 86400, encoderToken);
+        jedisAdapter.setex(key, 8640000, encoderToken);
         return new UserSignResult(token, mail);
     }
 }
