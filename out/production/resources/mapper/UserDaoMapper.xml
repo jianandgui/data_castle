@@ -27,7 +27,7 @@
 
     <select id="getUser" parameterType="String" resultType="cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo">
         SELECT
-        t_id AS teamId,username,pwd,mail,enable
+        t_id AS teamId,username,pwd,mail,enable,school_number AS schoolNumber
         FROM user_info
         WHERE mail=#{mail}
     </select>

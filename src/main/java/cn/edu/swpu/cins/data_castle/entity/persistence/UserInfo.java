@@ -12,6 +12,7 @@ public class UserInfo {
     private Integer id;
     private Integer teamId;
     private String username;
+    private Integer schoolNumber;
     private String pwd;
     private String mail;
     private int enable;
@@ -43,6 +44,11 @@ public class UserInfo {
 
     public UserInfo setEnable(int enable) {
         this.enable = enable;
+        return this;
+    }
+
+    public UserInfo setSchoolNumber(Integer schoolNumber) {
+        this.schoolNumber = schoolNumber;
         return this;
     }
 }

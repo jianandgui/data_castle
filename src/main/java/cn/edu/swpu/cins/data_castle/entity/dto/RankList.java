@@ -10,12 +10,13 @@ import lombok.NoArgsConstructor;
 @Data
 public class RankList {
     private int teamId;
-    private int teamName;
+    private String teamName;
     private int score;
     private int position;
 
     public RankList(Ranking ranking) {
         this.teamId = ranking.getTeamId();
         this.score = ranking.getScore();
+        this.teamName = ranking.getTeamName();
     }
 }

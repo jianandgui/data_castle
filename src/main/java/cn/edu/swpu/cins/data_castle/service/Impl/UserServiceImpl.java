@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService{
 
         String key = RedisKey.getDatacastleRegister(userInfo.getMail());
         String token = UUID.randomUUID().toString();
-        jedisAdapter.setex(key, 3, token);
+        jedisAdapter.setex(key, 3000, token);
         String subject = formatService.getSignUpSubject(userInfo.getUsername());
         String content = formatService.getSignUpContent(userInfo.getMail(), token);
         mailService.sendMail(userInfo.getMail(), subject, content);

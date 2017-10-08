@@ -1,8 +1,11 @@
 package cn.edu.swpu.cins.data_castle.dao;
 
+import cn.edu.swpu.cins.data_castle.entity.persistence.Ranking;
 import cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 @Mapper
@@ -13,5 +16,7 @@ public interface MatchDao {
 
 //    @Insert("INSERT INTO" + TABLE + "(" + FIELD + ")" + "VALUES(#{teamInfo})")
     int saveTeam(TeamInfo teamInfo);
+
+    List<Ranking> selectAll();
 
 }

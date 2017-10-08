@@ -22,4 +22,10 @@ public class MatchDaoTest {
         matchDao.saveTeam(teamInfo);
     }
 
+    @Test
+    public void selectAll() throws Exception {
+        System.out.println(matchDao.selectAll().toString());
+
+    }
+
 }
