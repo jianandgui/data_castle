@@ -3,6 +3,8 @@ package cn.edu.swpu.cins.data_castle.service.Impl;
 import cn.edu.swpu.cins.data_castle.dao.MatchDao;
 import cn.edu.swpu.cins.data_castle.dao.UserDao;
 import cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam;
+import cn.edu.swpu.cins.data_castle.entity.dto.RankList;
+import cn.edu.swpu.cins.data_castle.entity.persistence.Ranking;
 import cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo;
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
 import cn.edu.swpu.cins.data_castle.exception.FileException;
@@ -17,7 +19,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class MatchServiceImpl implements MatchService {
@@ -83,6 +87,7 @@ public class MatchServiceImpl implements MatchService {
         }
         return true;
     }
+
     private String checkDir(int teamId) {
         String path = location + "/" + teamId;
         File dir = new File(path);
@@ -92,5 +97,16 @@ public class MatchServiceImpl implements MatchService {
             }
         }
         return path;
+    }
+
+    @Override
+    public List<RankList> queryRankList() {
+        List<Ranking> rankingList = marchDao.selectAll();
+        List<RankList> rankLists = rankingList.stream().map(RankList::new).sorted(Comparator.comparing(RankList::getScore).reversed()).collect(Collectors.toList());
+        int i = 0;
+        for (RankList rank : rankLists) {
+            rank.setPosition(++i);
+        }
+        return rankLists;
     }
 }

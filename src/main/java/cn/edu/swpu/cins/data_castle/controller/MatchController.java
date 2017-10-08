@@ -32,4 +32,9 @@ public class MatchController {
     public ResponseEntity uploadFile(@RequestHeader("data-castle-mail") String mail, @RequestPart("answer") MultipartFile file) {
         return new ResponseEntity(matchService.saveFile(file, mail), HttpStatus.OK);
     }
+
+    @GetMapping("rankList")
+    public ResponseEntity getRankList() {
+        return new ResponseEntity(matchService.queryRankList(), HttpStatus.OK);
+    }
 }
