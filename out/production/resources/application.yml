@@ -33,7 +33,7 @@ mybatis:
 data_castle:
    server:
      host: 182.150.37.58
-     port: 8796
+     port: 9595
    path:
         user:
            enable: dataCastle/user/enable

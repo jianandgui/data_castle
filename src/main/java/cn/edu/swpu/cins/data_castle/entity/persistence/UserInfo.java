@@ -12,7 +12,7 @@ public class UserInfo {
     private Integer id;
     private Integer teamId;
     private String username;
-    private Integer schoolNumber;
+    private Long schoolNumber;
     private String pwd;
     private String mail;
     private int enable;
@@ -47,7 +47,7 @@ public class UserInfo {
         return this;
     }
 
-    public UserInfo setSchoolNumber(Integer schoolNumber) {
+    public UserInfo setSchoolNumber(Long schoolNumber) {
         this.schoolNumber = schoolNumber;
         return this;
     }

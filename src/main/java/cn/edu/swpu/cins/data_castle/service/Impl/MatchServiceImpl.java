@@ -7,6 +7,8 @@ import cn.edu.swpu.cins.data_castle.entity.dto.RankList;
 import cn.edu.swpu.cins.data_castle.entity.persistence.Ranking;
 import cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo;
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
+import cn.edu.swpu.cins.data_castle.enums.ExceptionEnum;
+import cn.edu.swpu.cins.data_castle.enums.MatchEnum;
 import cn.edu.swpu.cins.data_castle.exception.FileException;
 import cn.edu.swpu.cins.data_castle.exception.MatchException;
 import cn.edu.swpu.cins.data_castle.service.MatchService;
@@ -15,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -39,44 +42,62 @@ public class MatchServiceImpl implements MatchService {
     }
 
     @Override
+    @Transactional
     public int addTeam(MatchTeam matchTeam) {
-        List<String> mails = matchTeam.getTeamerMail();
-        if (mails.size() > 2) {
-            throw new MatchException("参数错误", HttpStatus.BAD_REQUEST);
-        }
         String teamName = matchTeam.getTeamName();
-        int joinCount = 0;
+        List<String> mails = matchTeam.getTeamerMail();
+        checkCreateTeam(matchTeam);
+        TeamInfo teamInfo = new TeamInfo();
+        teamInfo.setTeamName(teamName);
+        int teamId = marchDao.saveTeam(teamInfo);
+        if (teamId == 0) {
+            throw new MatchException(ExceptionEnum.INTERNAL_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        int modCount = 0;
+        for (String mail : mails) {
+            modCount+=userDao.updateUser(mail, teamId);
+        }
+        if (modCount != mails.size()) {
+            throw new MatchException(ExceptionEnum.INTERNAL_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return 1;
+    }
+
+    public void checkCreateTeam(MatchTeam matchTeam) {
+
+        List<String> mails = matchTeam.getTeamerMail();
+        if (mails.size() < 1 || mails.size() > 2) {
+            throw new MatchException(ExceptionEnum.ERROR_PRAM.getMsg(), HttpStatus.BAD_REQUEST);
+        }
+        if (matchTeam.getTeamName() == null) {
+            throw new MatchException(ExceptionEnum.FORBIDEN.getMsg(), HttpStatus.FORBIDDEN);
+        }
+        int joinedCount = 0;
         int noEnableCount = 0;
-        UserInfo user = null;
+        UserInfo user;
         for (String mail : mails) {
             user = userDao.getUser(mail);
             if (user.getTeamId() != 0) {
-                joinCount++;
+                joinedCount++;
             }
             if (user.getEnable() == 0) {
                 noEnableCount++;
             }
         }
-        if (joinCount != 0) {
-            throw new MatchException("不能与已经组队的人组队", HttpStatus.BAD_REQUEST);
+        if (joinedCount != 0) {
+            throw new MatchException(MatchEnum.BAN_WITH_NATCHED.getMsg(), HttpStatus.FORBIDDEN);
         }
         if (noEnableCount != 0) {
-            throw new MatchException("组队所有人都必须激活自己的账号", HttpStatus.BAD_REQUEST);
+            throw new MatchException(MatchEnum.BAN_WITH_NOENABLE.getMsg(), HttpStatus.FORBIDDEN);
         }
-        TeamInfo teamInfo = new TeamInfo();
-        teamInfo.setTeamName(teamName);
-        int teamId = marchDao.saveTeam(teamInfo);
-        for (String mail : mails) {
-            userDao.updateUser(mail, teamId);
-        }
-        return 1;
     }
 
     @Override
     public boolean saveFile(MultipartFile multipartFile, String mail) {
         int teamId = userDao.getUser(mail).getTeamId();
 
-        String path = checkDir(teamId);
+//        String path = checkDir(teamId);
+        String path = location;
         String fileName = teamId + "_answer";
         path += "/" + fileName;
         File file = new File(path);
@@ -89,7 +110,7 @@ public class MatchServiceImpl implements MatchService {
         return true;
     }
 
-    private String checkDir(int teamId) {
+   /* private String checkDir(int teamId) {
         String path = location + "/" + teamId;
         File dir = new File(path);
         if (!dir.exists()) {
@@ -98,16 +119,23 @@ public class MatchServiceImpl implements MatchService {
             }
         }
         return path;
-    }
+    }*/
 
     @Override
     public List<RankList> queryRankList() {
         List<Ranking> rankingList = marchDao.selectAll();
-        List<RankList> rankLists = rankingList.stream().map(RankList::new).sorted(Comparator.comparing(RankList::getScore).reversed()).collect(Collectors.toList());
+        List<RankList> rankLists = getRankList(rankingList);
         int i = 0;
         for (RankList rank : rankLists) {
             rank.setPosition(++i);
         }
         return rankLists;
+    }
+
+    public List<RankList> getRankList(List<Ranking> rankingList) {
+        return rankingList.stream()
+                .map(RankList::new)
+                .sorted(Comparator.comparing(RankList::getScore).reversed())
+                .collect(Collectors.toList());
     }
 }

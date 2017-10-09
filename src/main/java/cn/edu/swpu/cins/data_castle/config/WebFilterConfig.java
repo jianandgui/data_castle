@@ -32,8 +32,7 @@ public class WebFilterConfig extends WebMvcConfigurerAdapter {
                 .addPathPatterns("/user/signup", "/user/enable", "/match/upload", "/match/join");*/
         registry
                 .addInterceptor(new TokenFilter(jedisAdapter,passwordEncoderService))
-                .addPathPatterns("/**")
-                .excludePathPatterns("/dataCastle/user/**");
+                .addPathPatterns("/dataCastle/match/**");
     }
 
 }
