@@ -32,7 +32,7 @@ mybatis:
 
 data_castle:
    server:
-     host: 127.0.0.1
+     host: 182.150.37.58
      port: 8796
    path:
         user:

@@ -77,7 +77,8 @@ public class MatchServiceImpl implements MatchService {
         int teamId = userDao.getUser(mail).getTeamId();
 
         String path = checkDir(teamId);
-        path += "/" + timeService.getDate();
+        String fileName = teamId + "_answer";
+        path += "/" + fileName;
         File file = new File(path);
         try {
             multipartFile.transferTo(file);
