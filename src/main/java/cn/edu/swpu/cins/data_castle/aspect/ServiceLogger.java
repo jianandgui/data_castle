@@ -25,22 +25,23 @@ public class ServiceLogger {
 
 	@Before("service()")
 	public void before(JoinPoint joinPoint) {
-		ServletRequestAttributes attributes= (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-		HttpServletRequest request=attributes.getRequest();
 		Signature signature = joinPoint.getSignature();
 		String method = signature.getDeclaringTypeName() + '.' + signature.getName();
+		logger.info("\n");
 		logger.info("calling : " + method);
 		Object[] args = joinPoint.getArgs();
-		for (Object arg :
-			args) {
+		for (Object arg : args) {
 			logger.info("arg : " + arg);
 		}
+		logger.info("\n");
 	}
 
 
 	@AfterReturning(pointcut = "service()", returning = "ret")
 	public void afterReturn(Object ret) {
+		logger.info("\n");
 		logger.info("service return : " + ret);
+		logger.info("\n");
 	}
 
 }
