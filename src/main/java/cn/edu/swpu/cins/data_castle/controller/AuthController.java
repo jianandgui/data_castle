@@ -28,18 +28,18 @@ public class AuthController {
      * @return
      */
     @GetMapping(value = "verifyCode")
-    public ResponseEntity getVerifyCodeForLogin(HttpServletResponse response) {
+    public ResponseEntity<?> getVerifyCodeForLogin(HttpServletResponse response) {
         try {
             String code = getCode.createCode(response);
-            return new ResponseEntity(code, HttpStatus.OK);
+            return new ResponseEntity<>(code, HttpStatus.OK);
         } catch (MatchException e) {
-            return new ResponseEntity(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
 
 
     @PostMapping("signUp")
-    public ResponseEntity userRegister(@RequestBody SignUp signUp,@RequestHeader("captcha-code") String captchaCode) throws MessagingException {
+    public ResponseEntity<?> userRegister(@RequestBody SignUp signUp,@RequestHeader("captcha-code") String captchaCode) throws MessagingException {
         /*
         * 1、验证信息、验证码
         * 2、保存数据库
@@ -48,31 +48,32 @@ public class AuthController {
         *
         * */
         try {
-            return new ResponseEntity(userService.insertUser(signUp, captchaCode), HttpStatus.OK);
+            return new ResponseEntity<>(userService.insertUser(signUp, captchaCode), HttpStatus.OK);
         } catch (UserException e) {
-            return new ResponseEntity(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(e.getMessage(), e.getStatus());
         } catch (MatchException e) {
-            return new ResponseEntity(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
 
     @PostMapping("signIn")
-    public ResponseEntity userLogin(@RequestBody SignInUser signInUser, @RequestHeader("captcha-code") String captchaCode) {
+    public ResponseEntity<?> userLogin(@RequestBody SignInUser signInUser, @RequestHeader("captcha-code") String captchaCode) {
         try {
-            return new ResponseEntity(userService.userLogin(signInUser, captchaCode), HttpStatus.OK);
+            System.out.println("我是测试");
+            return new ResponseEntity<>(userService.userLogin(signInUser, captchaCode), HttpStatus.OK);
         } catch (UserException e) {
-            return new ResponseEntity(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(e.getMessage(), e.getStatus());
         } catch (MatchException e) {
-            return new ResponseEntity(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
 
     @GetMapping("enable")
-    public ResponseEntity userEnable(@RequestParam("mail") String mail,@RequestParam("token") String token) {
+    public ResponseEntity<?> userEnable(@RequestParam("mail") String mail,@RequestParam("token") String token) {
         try {
-            return new ResponseEntity(userService.enableAccount(mail, token), HttpStatus.OK);
+            return new ResponseEntity<>(userService.enableAccount(mail, token), HttpStatus.OK);
         } catch (RuntimeException e) {
-            return new ResponseEntity(e.getMessage(), HttpStatus.FORBIDDEN);
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.FORBIDDEN);
         }
     }
 }

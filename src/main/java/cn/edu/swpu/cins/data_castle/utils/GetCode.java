@@ -23,7 +23,7 @@ import java.util.UUID;
 public class GetCode {
     private JedisAdapter jedisAdapter;
 
-    private static int captchaExpires = 3 * 60; //超时时间3min
+    private static int captchaExpires = 5 * 60; //超时时间3min
     private static int captchaW = 200;
     private static int captchaH = 60;
 

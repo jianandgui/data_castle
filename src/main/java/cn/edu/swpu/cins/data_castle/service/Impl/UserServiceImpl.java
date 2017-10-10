@@ -45,10 +45,11 @@ public class UserServiceImpl implements UserService{
 
 
     @Override
-    @Transactional(rollbackFor ={MessagingException.class, SQLException.class, DataCastleException.class})
+    @Transactional(rollbackFor ={MessagingException.class,UserException.class, SQLException.class, DataCastleException.class})
     public int insertUser(SignUp signUp,String code) throws MessagingException{
         checkSignUp(code, signUp.getVerifyCode());
         UserInfo userInfo = signUp.getUserInfo();
+        checkUnique(userInfo);
         String key = createKey.getKey(REGISTER,signUp.getUserInfo().getMail());
         String token = UUID.randomUUID().toString();
         jedisAdapter.setex(key, 3000, token);
@@ -60,6 +61,12 @@ public class UserServiceImpl implements UserService{
         }
         sendMail(userInfo,token);
         return 1;
+    }
+
+    public void checkUnique(UserInfo userInfo) {
+        if (userDao.getUser(userInfo.getMail()) != null) {
+            throw new UserException(ExceptionEnum.MAIL_USERD.getMsg(), HttpStatus.FORBIDDEN);
+        }
     }
 
     public void sendMail(UserInfo userInfo,String token)  {

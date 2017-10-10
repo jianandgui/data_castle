@@ -38,4 +38,4 @@ data_castle:
         user:
            enable: dataCastle/user/enable
    answer:
-     location: /home/yang/file
+     location: /opt/match-answer

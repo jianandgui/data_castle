@@ -20,29 +20,30 @@ public class MatchController {
     private MatchService matchService;
 
     @PostMapping("team")
-    public ResponseEntity createTeam(@RequestBody MatchTeam matchTeam) throws MatchException {
+    public ResponseEntity<?> createTeam(@RequestBody MatchTeam matchTeam) throws MatchException {
         try {
-            return new ResponseEntity(matchService.addTeam(matchTeam), HttpStatus.OK);
+            return new ResponseEntity<>(matchService.addTeam(matchTeam), HttpStatus.OK);
         } catch (DataCastleException e) {
-            return new ResponseEntity(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
 
     @PostMapping("answer")
-    public ResponseEntity uploadFile(@RequestHeader("data-castle-mail") String mail, @RequestPart("answer") MultipartFile file) {
+    public ResponseEntity<?> uploadFile(@RequestHeader("data-castle-mail") String mail, @RequestPart("answer") MultipartFile file) {
         try {
-            return new ResponseEntity(matchService.saveFile(file, mail), HttpStatus.OK);
+            return new ResponseEntity<>(matchService.saveFile(file, mail), HttpStatus.OK);
+//            return new ResponseEntity("上传成功", HttpStatus.OK);
         } catch (DataCastleException e) {
-            return new ResponseEntity(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
 
     @GetMapping("rankList")
-    public ResponseEntity getRankList() {
+    public ResponseEntity<?> getRankList() {
         try {
-            return new ResponseEntity(matchService.queryRankList(), HttpStatus.OK);
+            return new ResponseEntity<>(matchService.queryRankList(), HttpStatus.OK);
         } catch (DataCastleException e) {
-            return new ResponseEntity(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
 }

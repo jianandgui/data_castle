@@ -17,6 +17,7 @@ public enum ExceptionEnum {
     ILLEAGE_OPERATION("非法操作"),
     GET_CODE_ERROR("获取验证码失败"),
     FAILED_ENABLE("激活失败"),
+    MAIL_USERD("邮箱已经被注册"),
     ERROR_PWD("密码不正确");
     private String msg;
 
