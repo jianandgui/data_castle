@@ -1,13 +1,12 @@
 package cn.edu.swpu.cins.data_castle.entity.dto;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 public class UserSignResult {
 
     private String token;

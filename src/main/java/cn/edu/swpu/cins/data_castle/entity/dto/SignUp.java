@@ -1,11 +1,10 @@
 package cn.edu.swpu.cins.data_castle.entity.dto;
 
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class SignUp {
