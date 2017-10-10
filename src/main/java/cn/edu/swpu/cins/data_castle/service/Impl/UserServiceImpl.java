@@ -1,5 +1,8 @@
 package cn.edu.swpu.cins.data_castle.service.Impl;
 
+import cn.edu.swpu.cins.data_castle.async.EventModel;
+import cn.edu.swpu.cins.data_castle.async.EventProducer;
+import cn.edu.swpu.cins.data_castle.async.EventType;
 import cn.edu.swpu.cins.data_castle.dao.UserDao;
 import cn.edu.swpu.cins.data_castle.entity.dto.SignInUser;
 import cn.edu.swpu.cins.data_castle.entity.dto.SignUp;
@@ -7,6 +10,7 @@ import cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult;
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
 import cn.edu.swpu.cins.data_castle.enums.ExceptionEnum;
 import cn.edu.swpu.cins.data_castle.enums.VerifyCodeEnum;
+import cn.edu.swpu.cins.data_castle.exception.DataCastleException;
 import cn.edu.swpu.cins.data_castle.exception.OperationFailureException;
 import cn.edu.swpu.cins.data_castle.exception.UserException;
 import cn.edu.swpu.cins.data_castle.service.*;
@@ -19,6 +23,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.mail.MessagingException;
+import java.sql.SQLException;
 import java.util.UUID;
 
 @Service
@@ -33,35 +38,39 @@ public class UserServiceImpl implements UserService{
     private URLCoderService urlCoderService;
     private PasswordEncoderService passwordEncoderService;
     private CreateKey createKey;
+    private EventProducer producer;
 
     private final static String LOGIN = "login";
     private final static String REGISTER = "register";
 
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor ={MessagingException.class, SQLException.class, DataCastleException.class})
     public int insertUser(SignUp signUp,String code) throws MessagingException{
         checkSignUp(code, signUp.getVerifyCode());
         UserInfo userInfo = signUp.getUserInfo();
         String key = createKey.getKey(REGISTER,signUp.getUserInfo().getMail());
         String token = UUID.randomUUID().toString();
         jedisAdapter.setex(key, 3000, token);
-        senMail(userInfo,token);
         String pwd = userInfo.getPwd();
         userInfo.setPwd(passwordEncoderService.encode(pwd));
         int count = userDao.addUser(userInfo);
         if (count != 1) {
             throw new UserException(ExceptionEnum.REGISTER_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
+        sendMail(userInfo,token);
         return 1;
     }
 
-    public void senMail(UserInfo userInfo,String token)  {
+    public void sendMail(UserInfo userInfo,String token)  {
         String subject = formatService.getSignUpSubject(userInfo.getUsername());
         String content = formatService.getSignUpContent(userInfo.getMail(), token);
         try {
-            mailService.sendMail(userInfo.getMail(), subject, content);
-        } catch (MessagingException e) {
+            producer.fireEvent(new EventModel(EventType.MAIL)
+                    .setExts("to", userInfo.getMail())
+                    .setExts("subject", subject)
+                    .setExts("content", content));
+        } catch (RuntimeException e) {
             throw new UserException(ExceptionEnum.MAIL_SEND_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -100,7 +109,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = {RuntimeException.class,DataCastleException.class})
     public UserSignResult userLogin(SignInUser signInUser,String captchaCode) {
 
         String verifyKey = captchaCode;

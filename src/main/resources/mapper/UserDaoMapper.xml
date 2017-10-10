@@ -8,9 +8,9 @@
     <insert id="addUser" parameterType="cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo">
         INSERT INTO
         user_info
-        (username,pwd,mail)
+        (username,pwd,mail,school_number)
         VALUE
-        (#{username},#{pwd},#{mail})
+        (#{username},#{pwd},#{mail},#{schoolNumber})
     </insert>
 
     <update id="updateUser">

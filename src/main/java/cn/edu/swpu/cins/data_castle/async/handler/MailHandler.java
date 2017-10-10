@@ -4,6 +4,8 @@ package cn.edu.swpu.cins.data_castle.async.handler;
 import cn.edu.swpu.cins.data_castle.async.EventHandler;
 import cn.edu.swpu.cins.data_castle.async.EventModel;
 import cn.edu.swpu.cins.data_castle.async.EventType;
+import cn.edu.swpu.cins.data_castle.enums.ExceptionEnum;
+import cn.edu.swpu.cins.data_castle.service.MailService;
 import cn.edu.swpu.cins.data_castle.utils.JedisAdapter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,17 +22,17 @@ public class MailHandler implements EventHandler {
     @Autowired
     JedisAdapter jedisAdapter;
 
+    @Autowired
+    MailService mailService;
+
 
 
     @Override
     public void doHandle(EventModel model) {
         try{
-            String status=model.getExts().get("status");
-            switch (status) {
-
-        }
+            mailService.sendMail(model.getExts().get("to"),model.getExts().get("subject"),model.getExts().get("content"));
         }catch (Exception e){
-            logger.info(e.getMessage());
+            throw new RuntimeException(ExceptionEnum.INTERNAL_ERROR.getMsg());
         }
     }
 

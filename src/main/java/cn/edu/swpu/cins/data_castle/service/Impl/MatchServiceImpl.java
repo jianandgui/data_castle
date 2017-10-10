@@ -9,6 +9,7 @@ import cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo;
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
 import cn.edu.swpu.cins.data_castle.enums.ExceptionEnum;
 import cn.edu.swpu.cins.data_castle.enums.MatchEnum;
+import cn.edu.swpu.cins.data_castle.exception.DataCastleException;
 import cn.edu.swpu.cins.data_castle.exception.FileException;
 import cn.edu.swpu.cins.data_castle.exception.MatchException;
 import cn.edu.swpu.cins.data_castle.service.MatchService;
@@ -22,6 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -42,7 +44,7 @@ public class MatchServiceImpl implements MatchService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = {SQLException.class, DataCastleException.class,RuntimeException.class})
     public int addTeam(MatchTeam matchTeam) {
         String teamName = matchTeam.getTeamName();
         List<String> mails = matchTeam.getTeamerMail();
