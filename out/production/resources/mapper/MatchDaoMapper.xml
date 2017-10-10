@@ -13,7 +13,8 @@
     <select id="selectAll" resultType="cn.edu.swpu.cins.data_castle.entity.persistence.Ranking">
         SELECT
         t_id AS teamId,
-        score,
+        max_score AS maxScore,
+        last_score AS lastScore,
         (SELECT t.team_name  FROM team_info AS t WHERE t.id = r.t_id LIMIT 1) AS teamName
         FROM ranking AS r
     </select>

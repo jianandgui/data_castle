@@ -12,6 +12,7 @@ import cn.edu.swpu.cins.data_castle.enums.MatchEnum;
 import cn.edu.swpu.cins.data_castle.exception.DataCastleException;
 import cn.edu.swpu.cins.data_castle.exception.FileException;
 import cn.edu.swpu.cins.data_castle.exception.MatchException;
+import cn.edu.swpu.cins.data_castle.exception.UserException;
 import cn.edu.swpu.cins.data_castle.service.MatchService;
 import cn.edu.swpu.cins.data_castle.service.TimeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -125,7 +126,12 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public List<RankList> queryRankList() {
-        List<Ranking> rankingList = marchDao.selectAll();
+        List<Ranking> rankingList;
+        try {
+            rankingList = marchDao.selectAll();
+        } catch (UserException e) {
+            throw new UserException(ExceptionEnum.INTERNAL_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
         List<RankList> rankLists = getRankList(rankingList);
         int i = 0;
         for (RankList rank : rankLists) {
@@ -137,7 +143,7 @@ public class MatchServiceImpl implements MatchService {
     public List<RankList> getRankList(List<Ranking> rankingList) {
         return rankingList.stream()
                 .map(RankList::new)
-                .sorted(Comparator.comparing(RankList::getScore).reversed())
+                .sorted(Comparator.comparing(RankList::getMaxScore).reversed())
                 .collect(Collectors.toList());
     }
 }

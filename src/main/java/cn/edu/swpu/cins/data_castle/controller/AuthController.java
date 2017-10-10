@@ -1,71 +1,39 @@
 package cn.edu.swpu.cins.data_castle.controller;
 
-import cn.apiclub.captcha.Captcha;
-import cn.apiclub.captcha.backgrounds.GradiatedBackgroundProducer;
-import cn.apiclub.captcha.gimpy.FishEyeGimpyRenderer;
 import cn.edu.swpu.cins.data_castle.entity.dto.SignInUser;
 import cn.edu.swpu.cins.data_castle.entity.dto.SignUp;
+import cn.edu.swpu.cins.data_castle.exception.MatchException;
+import cn.edu.swpu.cins.data_castle.exception.UserException;
 import cn.edu.swpu.cins.data_castle.service.UserService;
-import cn.edu.swpu.cins.data_castle.utils.JedisAdapter;
+import cn.edu.swpu.cins.data_castle.utils.GetCode;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sun.misc.BASE64Encoder;
 
-import javax.imageio.ImageIO;
 import javax.mail.MessagingException;
 import javax.servlet.http.HttpServletResponse;
-import java.awt.*;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("dataCastle/user")
 @AllArgsConstructor
 public class AuthController {
 
-
     private UserService userService;
-    private JedisAdapter jedisAdapter;
-
-
-    private static int captchaExpires = 3 * 60; //超时时间3min
-    private static int captchaW = 200;
-    private static int captchaH = 60;
+    private GetCode getCode;
 
     /**
      * 获取登录验证码接口
      *
      * @return
      */
-    //, produces = MediaType.IMAGE_PNG_VALUE
     @GetMapping(value = "verifyCode")
     public ResponseEntity getVerifyCodeForLogin(HttpServletResponse response) {
-
-        BASE64Encoder encoder = new BASE64Encoder();
-
-        String uuid = UUID.randomUUID().toString();
-        Captcha captcha = new Captcha.Builder(captchaW, captchaH)
-                .addText().addBackground(new GradiatedBackgroundProducer(Color.orange, Color.white))
-                .gimp(new FishEyeGimpyRenderer())
-                .build();
-        System.out.println("验证码为    " + captcha.getAnswer());
-        //将验证码以<key,value>形式缓存到redis
-        jedisAdapter.setex(uuid, captchaExpires, captcha.getAnswer());
-        //将验证码key，及验证码的base64编码返回
-        response.addHeader("captcha-code", uuid);
-        ByteArrayOutputStream bao = new ByteArrayOutputStream();
         try {
-            ImageIO.write(captcha.getImage(), "png", bao);
-
-            byte[] bytes = bao.toByteArray();
-            String result = encoder.encode(bytes);
-//            response.getWriter().write(result);
-            return new ResponseEntity(result, HttpStatus.OK);
-        } catch (IOException e) {
-            return null;
+            String code = getCode.createCode(response);
+            return new ResponseEntity(code, HttpStatus.OK);
+        } catch (MatchException e) {
+            return new ResponseEntity(e.getMessage(), e.getStatus());
         }
     }
 
@@ -79,13 +47,24 @@ public class AuthController {
         * 4、发送邮件确认链接
         *
         * */
-        return new ResponseEntity(userService.insertUser(signUp,captchaCode), HttpStatus.OK);
+        try {
+            return new ResponseEntity(userService.insertUser(signUp, captchaCode), HttpStatus.OK);
+        } catch (UserException e) {
+            return new ResponseEntity(e.getMessage(), e.getStatus());
+        } catch (MatchException e) {
+            return new ResponseEntity(e.getMessage(), e.getStatus());
+        }
     }
 
     @PostMapping("signIn")
     public ResponseEntity userLogin(@RequestBody SignInUser signInUser, @RequestHeader("captcha-code") String captchaCode) {
-
-        return new ResponseEntity(userService.userLogin(signInUser, captchaCode), HttpStatus.OK);
+        try {
+            return new ResponseEntity(userService.userLogin(signInUser, captchaCode), HttpStatus.OK);
+        } catch (UserException e) {
+            return new ResponseEntity(e.getMessage(), e.getStatus());
+        } catch (MatchException e) {
+            return new ResponseEntity(e.getMessage(), e.getStatus());
+        }
     }
 
     @GetMapping("enable")

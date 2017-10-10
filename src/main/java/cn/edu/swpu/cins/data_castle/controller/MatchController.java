@@ -30,11 +30,19 @@ public class MatchController {
 
     @PostMapping("answer")
     public ResponseEntity uploadFile(@RequestHeader("data-castle-mail") String mail, @RequestPart("answer") MultipartFile file) {
-        return new ResponseEntity(matchService.saveFile(file, mail), HttpStatus.OK);
+        try {
+            return new ResponseEntity(matchService.saveFile(file, mail), HttpStatus.OK);
+        } catch (DataCastleException e) {
+            return new ResponseEntity(e.getMessage(), e.getStatus());
+        }
     }
 
     @GetMapping("rankList")
     public ResponseEntity getRankList() {
-        return new ResponseEntity(matchService.queryRankList(), HttpStatus.OK);
+        try {
+            return new ResponseEntity(matchService.queryRankList(), HttpStatus.OK);
+        } catch (DataCastleException e) {
+            return new ResponseEntity(e.getMessage(), e.getStatus());
+        }
     }
 }
