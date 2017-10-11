@@ -18,6 +18,9 @@ spring:
        starttls:
                  enable: true
                  required: true
+  aop:
+    auto: true
+    proxy-target-class: true
 
 
 mybatis:
@@ -39,3 +42,26 @@ data_castle:
            enable: dataCastle/user/enable
    answer:
      location: /opt/match-answer
+
+logging:
+  file: data-castle.log
+  level: info
+
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+    path: /test
+  actuator:
+
+security:
+  user:
+    name: muyi
+    password: yang
+
+management:
+  port: 8796
+  address: 127.0.0.1
+
+
+

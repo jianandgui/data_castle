@@ -46,3 +46,23 @@ data_castle:
 logging:
   file: data-castle.log
   level: info
+
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+    path: /shutdown
+  actuator:
+
+
+security:
+  user:
+    name: muyi
+    password: yang
+
+management:
+  port: 8796
+  address: 127.0.0.1
+
+
+
