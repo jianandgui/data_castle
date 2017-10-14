@@ -5,8 +5,8 @@ import lombok.Data;
 
 @AllArgsConstructor
 public enum VerifyCodeEnum {
-    REPEATE_GETCODE("请重新获取验证码！"),
-    ERROR_CODE("验证码错误，请重新输入！");
+    REPEATE_GETCODE("please input verifyCode again"),
+    ERROR_CODE("verifyCode is wrong");
 
     private String Msg;
 

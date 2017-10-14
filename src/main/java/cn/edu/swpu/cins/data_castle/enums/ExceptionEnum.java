@@ -5,20 +5,20 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public enum ExceptionEnum {
 
-    ERROR_PRAM("参数错误"),
-    ENABLE_FAILED("链接失效，激活失败"),
-    VERIFY_FAILED("token验证失败"),
-    NO_ENABLE("尚未激活，请激活后使用"),
-    NO_USER("没有该用户，请核对信息后登录"),
-    INTERNAL_ERROR("服务器内部错误"),
-    FORBIDEN("队伍名字不符合规范"),
-    REGISTER_ERROR("注册失败"),
-    MAIL_SEND_ERROR("邮件发送失败"),
-    ILLEAGE_OPERATION("非法操作"),
-    GET_CODE_ERROR("获取验证码失败"),
-    FAILED_ENABLE("激活失败"),
-    MAIL_USERD("邮箱已经被注册"),
-    ERROR_PWD("密码不正确");
+    ERROR_PRAM("parameter is error"),
+    ENABLE_FAILED("link lose effectiveness,Activing failed"),
+    VERIFY_FAILED("token verify failed"),
+    NO_ENABLE("you have to active you account"),
+    NO_USER("no user"),
+    INTERNAL_ERROR("server inner error"),
+    FORBIDEN("your teamName "),
+    REGISTER_ERROR("register failed"),
+    MAIL_SEND_ERROR("mail send error"),
+    ILLEAGE_OPERATION("illegal operation"),
+    GET_CODE_ERROR("get verifyCode failed"),
+    FAILED_ENABLE("active failed"),
+    MAIL_USERD("you email has been used"),
+    ERROR_PWD("password wrong");
     private String msg;
 
     public String getMsg() {

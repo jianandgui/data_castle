@@ -6,8 +6,8 @@ import lombok.Data;
 @AllArgsConstructor
 
 public enum MatchEnum {
-    BAN_WITH_NATCHED("不能与已经组队的组队！"),
-    BAN_WITH_NOENABLE("不能与还未激活帐号的人组队！");
+    BAN_WITH_NATCHED("you have to match with person who do not belong a team"),
+    BAN_WITH_NOENABLE("you hava to match with person who has active");
 
     private String msg;
 
