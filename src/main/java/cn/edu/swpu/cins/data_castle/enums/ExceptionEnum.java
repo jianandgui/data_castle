@@ -18,7 +18,9 @@ public enum ExceptionEnum {
     GET_CODE_ERROR("get verifyCode failed"),
     FAILED_ENABLE("active failed"),
     MAIL_USERD("you email has been used"),
+    FILE_UPLOAD_FAILED("upload file failed"),
     ERROR_PWD("password wrong");
+
     private String msg;
 
     public String getMsg() {

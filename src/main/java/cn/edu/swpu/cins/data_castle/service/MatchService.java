@@ -12,7 +12,7 @@ import java.util.List;
 public interface MatchService {
     int addTeam(MatchTeam matchTeam) throws MatchException;
 
-    boolean saveFile(MultipartFile file, String mail) throws FileException, UserException;
+    void saveFile(MultipartFile file, String mail) throws FileException, UserException;
 
     List<RankList> queryRankList() throws UserException;
 }

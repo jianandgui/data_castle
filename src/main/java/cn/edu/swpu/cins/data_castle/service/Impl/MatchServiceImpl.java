@@ -52,32 +52,34 @@ public class MatchServiceImpl implements MatchService {
         checkCreateTeam(matchTeam);
         TeamInfo teamInfo = new TeamInfo();
         teamInfo.setTeamName(teamName);
+        checkTeamSaveToDB(teamInfo, mails);
+        return 1;
+    }
+
+    public void checkTeamSaveToDB(TeamInfo teamInfo,List<String> mails) throws MatchException {
         int teamId = marchDao.saveTeam(teamInfo);
         if (teamId == 0) {
             throw new MatchException(ExceptionEnum.INTERNAL_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
         int modCount = 0;
         for (String mail : mails) {
-            modCount+=userDao.updateUser(mail, teamId);
+            modCount += userDao.updateUser(mail, teamId);
         }
         if (modCount != mails.size()) {
             throw new MatchException(ExceptionEnum.INTERNAL_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return 1;
     }
 
     public void checkCreateTeam(MatchTeam matchTeam) throws MatchException {
-
         List<String> mails = matchTeam.getTeamerMail();
-        if (mails.size() < 1 || mails.size() > 2) {
-            throw new MatchException(ExceptionEnum.ERROR_PRAM.getMsg(), HttpStatus.BAD_REQUEST);
-        }
-        if (matchTeam.getTeamName() == null) {
-            throw new MatchException(ExceptionEnum.FORBIDEN.getMsg(), HttpStatus.FORBIDDEN);
-        }
+        checkMail(mails, matchTeam);
+        checkToMatch(mails);
+    }
+
+    public void checkToMatch(List<String> mails) throws MatchException {
+        UserInfo user;
         int joinedCount = 0;
         int noEnableCount = 0;
-        UserInfo user;
         for (String mail : mails) {
             user = userDao.getUser(mail);
             if (user.getTeamId() != 0) {
@@ -95,8 +97,17 @@ public class MatchServiceImpl implements MatchService {
         }
     }
 
+    public void checkMail(List<String> mails,MatchTeam matchTeam) throws MatchException {
+        if (mails.size() < 1 || mails.size() > 2) {
+            throw new MatchException(ExceptionEnum.ERROR_PRAM.getMsg(), HttpStatus.BAD_REQUEST);
+        }
+        if (matchTeam.getTeamName() == null) {
+            throw new MatchException(ExceptionEnum.FORBIDEN.getMsg(), HttpStatus.FORBIDDEN);
+        }
+    }
+
     @Override
-    public boolean saveFile(MultipartFile multipartFile, String mail) throws FileException, UserException {
+    public void saveFile(MultipartFile multipartFile, String mail) throws FileException, UserException {
 
         int teamId = userDao.getUser(mail).getTeamId();
 
@@ -108,10 +119,8 @@ public class MatchServiceImpl implements MatchService {
         try {
             multipartFile.transferTo(file);
         } catch (IOException e) {
-            e.printStackTrace();
-            return false;
+            throw  new FileException(ExceptionEnum.FILE_UPLOAD_FAILED.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return true;
     }
 
    /* private String checkDir(int teamId) {
