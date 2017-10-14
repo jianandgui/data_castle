@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     password: dataCastle
-    username: 1111
+    username: cins
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/cins_data_castle?verifyServerCertificate=false&useSSL=true&useUnicode=true&characterEncoding=utf8
   mail:

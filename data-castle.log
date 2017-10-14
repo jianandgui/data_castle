@@ -250,3 +250,9 @@ Using default security password: 4164f1f3-8048-4b2a-8637-b8b28f753f0f
 2017-10-14 11:30:53.376  INFO 5072 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
 2017-10-14 11:30:53.466  INFO 5072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8796 (http)
 2017-10-14 11:30:53.471  INFO 5072 --- [main] c.e.s.c.d.DataCastleApplication          : Started DataCastleApplication in 7.19 seconds (JVM running for 8.394)
+2017-10-14 11:39:03.461  INFO 5072 --- [http-nio-8796-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-14 11:39:03.461  INFO 5072 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-14 11:39:03.476  INFO 5072 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2017-10-14 11:39:04.000  INFO 5072 --- [Thread-7] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b81ce95: startup date [Sat Oct 14 11:30:47 CST 2017]; root of context hierarchy
+2017-10-14 11:39:04.003  INFO 5072 --- [Thread-7] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-14 11:39:04.009  INFO 5072 --- [Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
