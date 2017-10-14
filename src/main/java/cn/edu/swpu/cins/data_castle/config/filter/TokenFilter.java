@@ -21,8 +21,8 @@ public class TokenFilter implements HandlerInterceptor{
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String mail = request.getHeader("data-castle-mail");
-        String token = request.getHeader("data-castle-token");
+        String mail = request.getHeader("data_castle_mail");
+        String token = request.getHeader("data_castle_token");
         if (mail == null || token == null) {
             return forbidden(response);
         }
