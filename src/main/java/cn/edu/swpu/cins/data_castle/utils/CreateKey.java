@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CreateKey {
 
-    public String getKey(String type, String root) {
+    public String getKey(String type, String root) throws UserException {
 
         String key;
         switch (type) {

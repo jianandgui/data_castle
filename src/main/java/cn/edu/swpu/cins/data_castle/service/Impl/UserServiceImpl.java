@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     @Transactional(rollbackFor ={MessagingException.class,UserException.class, SQLException.class, DataCastleException.class})
-    public int insertUser(SignUp signUp,String code) throws MessagingException{
+    public int insertUser(SignUp signUp,String code) throws MessagingException, UserException {
         checkSignUp(code, signUp.getVerifyCode());
         UserInfo userInfo = signUp.getUserInfo();
         checkUnique(userInfo);
@@ -62,13 +62,13 @@ public class UserServiceImpl implements UserService{
         return 1;
     }
 
-    public void checkUnique(UserInfo userInfo) {
+    public void checkUnique(UserInfo userInfo) throws UserException {
         if (userDao.getUser(userInfo.getMail()) != null) {
             throw new UserException(ExceptionEnum.MAIL_USERD.getMsg(), HttpStatus.FORBIDDEN);
         }
     }
 
-    public void sendMail(UserInfo userInfo,String token)  {
+    public void sendMail(UserInfo userInfo,String token) throws UserException {
         String subject = formatService.getSignUpSubject(userInfo.getUsername());
         String content = formatService.getSignUpContent(userInfo.getMail(), token);
         try {
@@ -81,7 +81,7 @@ public class UserServiceImpl implements UserService{
         }
     }
 
-    public void checkSignUp(String code,String verifyCode) {
+    public void checkSignUp(String code,String verifyCode) throws UserException {
         if (code == null) {
             throw new UserException(VerifyCodeEnum.ERROR_CODE.getMsg(), HttpStatus.FORBIDDEN);
         }
@@ -95,7 +95,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public int enableAccount(String mail, String token) {
+    public int enableAccount(String mail, String token) throws OperationFailureException, UserException {
         String Tmail = urlCoderService.decode(mail);
         String Ttoken = urlCoderService.decode(token);
         String key = createKey.getKey(REGISTER,Tmail);
@@ -116,7 +116,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     @Transactional(rollbackFor = {RuntimeException.class,DataCastleException.class})
-    public UserSignResult userLogin(SignInUser signInUser,String captchaCode) {
+    public UserSignResult userLogin(SignInUser signInUser,String captchaCode) throws UserException {
 
         String verifyKey = captchaCode;
         if (!jedisAdapter.exists(verifyKey)) {

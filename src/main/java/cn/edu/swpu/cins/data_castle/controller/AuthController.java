@@ -28,7 +28,7 @@ public class AuthController {
      * @return
      */
     @GetMapping(value = "verifyCode")
-    public ResponseEntity<?> getVerifyCodeForLogin(HttpServletResponse response) {
+    public ResponseEntity<?> getVerifyCodeForLogin(HttpServletResponse response){
         try {
             String code = getCode.createCode(response);
             return new ResponseEntity<>(code, HttpStatus.OK);
@@ -62,7 +62,7 @@ public class AuthController {
 //            System.out.println("我是测试");
             return new ResponseEntity<>(userService.userLogin(signInUser, captchaCode), HttpStatus.OK);
         } catch (UserException e) {
-            return new ResponseEntity<>(e.getMessage(), e.getStatus());
+            return new ResponseEntity(e.getMessage(), e.getStatus());
         } catch (DataCastleException e) {
             return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }

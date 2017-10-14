@@ -28,7 +28,7 @@ public class GetCode {
     private static int captchaH = 60;
 
 
-    public String createCode(HttpServletResponse response) {
+    public String createCode(HttpServletResponse response) throws MatchException {
         BASE64Encoder encoder = new BASE64Encoder();
         String uuid = UUID.randomUUID().toString();
         Captcha captcha = new Captcha.Builder(captchaW, captchaH)

@@ -46,7 +46,7 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     @Transactional(rollbackFor = {SQLException.class, DataCastleException.class,RuntimeException.class})
-    public int addTeam(MatchTeam matchTeam) {
+    public int addTeam(MatchTeam matchTeam) throws MatchException {
         String teamName = matchTeam.getTeamName();
         List<String> mails = matchTeam.getTeamerMail();
         checkCreateTeam(matchTeam);
@@ -66,7 +66,7 @@ public class MatchServiceImpl implements MatchService {
         return 1;
     }
 
-    public void checkCreateTeam(MatchTeam matchTeam) {
+    public void checkCreateTeam(MatchTeam matchTeam) throws MatchException {
 
         List<String> mails = matchTeam.getTeamerMail();
         if (mails.size() < 1 || mails.size() > 2) {
@@ -96,7 +96,8 @@ public class MatchServiceImpl implements MatchService {
     }
 
     @Override
-    public boolean saveFile(MultipartFile multipartFile, String mail) {
+    public boolean saveFile(MultipartFile multipartFile, String mail) throws FileException, UserException {
+
         int teamId = userDao.getUser(mail).getTeamId();
 
 //        String path = checkDir(teamId);
@@ -125,11 +126,11 @@ public class MatchServiceImpl implements MatchService {
     }*/
 
     @Override
-    public List<RankList> queryRankList() {
+    public List<RankList> queryRankList() throws UserException {
         List<Ranking> rankingList;
         try {
             rankingList = marchDao.selectAll();
-        } catch (UserException e) {
+        } catch (Exception e) {
             throw new UserException(ExceptionEnum.INTERNAL_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
         List<RankList> rankLists = getRankList(rankingList);

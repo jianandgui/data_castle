@@ -2,7 +2,7 @@ package cn.edu.swpu.cins.data_castle.exception;
 
 import org.springframework.http.HttpStatus;
 
-public class DataCastleException extends RuntimeException{
+public class DataCastleException extends Exception{
 
     protected HttpStatus status;
     public DataCastleException() {
