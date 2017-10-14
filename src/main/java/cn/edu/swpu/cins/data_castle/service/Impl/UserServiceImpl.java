@@ -32,7 +32,6 @@ public class UserServiceImpl implements UserService{
 
 
     private UserDao userDao;
-    private MailService mailService;
     private JedisAdapter jedisAdapter;
     private MailFormatService formatService;
     private URLCoderService urlCoderService;
@@ -142,6 +141,7 @@ public class UserServiceImpl implements UserService{
         String mail = user.getMail();
         String key = createKey.getKey(LOGIN,mail);
         jedisAdapter.setex(key, 8640000, encoderToken);
-        return new UserSignResult(token, mail);
+        String username = user.getUsername();
+        return new UserSignResult(token, mail, username);
     }
 }

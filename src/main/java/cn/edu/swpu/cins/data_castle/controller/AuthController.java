@@ -2,7 +2,7 @@ package cn.edu.swpu.cins.data_castle.controller;
 
 import cn.edu.swpu.cins.data_castle.entity.dto.SignInUser;
 import cn.edu.swpu.cins.data_castle.entity.dto.SignUp;
-import cn.edu.swpu.cins.data_castle.exception.MatchException;
+import cn.edu.swpu.cins.data_castle.exception.DataCastleException;
 import cn.edu.swpu.cins.data_castle.exception.UserException;
 import cn.edu.swpu.cins.data_castle.service.UserService;
 import cn.edu.swpu.cins.data_castle.utils.GetCode;
@@ -32,7 +32,7 @@ public class AuthController {
         try {
             String code = getCode.createCode(response);
             return new ResponseEntity<>(code, HttpStatus.OK);
-        } catch (MatchException e) {
+        } catch (DataCastleException e) {
             return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
@@ -51,7 +51,7 @@ public class AuthController {
             return new ResponseEntity<>(userService.insertUser(signUp, captchaCode), HttpStatus.OK);
         } catch (UserException e) {
             return new ResponseEntity<>(e.getMessage(), e.getStatus());
-        } catch (MatchException e) {
+        } catch (DataCastleException e) {
             return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
@@ -63,7 +63,7 @@ public class AuthController {
             return new ResponseEntity<>(userService.userLogin(signInUser, captchaCode), HttpStatus.OK);
         } catch (UserException e) {
             return new ResponseEntity<>(e.getMessage(), e.getStatus());
-        } catch (MatchException e) {
+        } catch (DataCastleException e) {
             return new ResponseEntity<>(e.getMessage(), e.getStatus());
         }
     }
@@ -72,7 +72,7 @@ public class AuthController {
     public ResponseEntity<?> userEnable(@RequestParam("mail") String mail,@RequestParam("token") String token) {
         try {
             return new ResponseEntity<>(userService.enableAccount(mail, token), HttpStatus.OK);
-        } catch (RuntimeException e) {
+        } catch (DataCastleException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.FORBIDDEN);
         }
     }

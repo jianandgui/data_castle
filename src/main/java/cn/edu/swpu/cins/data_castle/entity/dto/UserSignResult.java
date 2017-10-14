@@ -10,5 +10,6 @@ import lombok.*;
 public class UserSignResult {
 
     private String token;
+    private String username;
     private String mail;
 }
