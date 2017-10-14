@@ -18,6 +18,7 @@ import cn.edu.swpu.cins.data_castle.utils.CreateKey;
 import cn.edu.swpu.cins.data_castle.utils.JedisAdapter;
 import cn.edu.swpu.cins.data_castle.utils.RedisKey;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,7 +28,6 @@ import java.sql.SQLException;
 import java.util.UUID;
 
 @Service
-@AllArgsConstructor
 public class UserServiceImpl implements UserService{
 
 
@@ -38,6 +38,17 @@ public class UserServiceImpl implements UserService{
     private PasswordEncoderService passwordEncoderService;
     private CreateKey createKey;
     private EventProducer producer;
+
+    @Autowired
+    public UserServiceImpl(UserDao userDao, JedisAdapter jedisAdapter, MailFormatService formatService, URLCoderService urlCoderService, PasswordEncoderService passwordEncoderService, CreateKey createKey, EventProducer producer) {
+        this.userDao = userDao;
+        this.jedisAdapter = jedisAdapter;
+        this.formatService = formatService;
+        this.urlCoderService = urlCoderService;
+        this.passwordEncoderService = passwordEncoderService;
+        this.createKey = createKey;
+        this.producer = producer;
+    }
 
     private final static String LOGIN = "login";
     private final static String REGISTER = "register";
@@ -54,12 +65,16 @@ public class UserServiceImpl implements UserService{
         jedisAdapter.setex(key, 3000, token);
         String pwd = userInfo.getPwd();
         userInfo.setPwd(passwordEncoderService.encode(pwd));
+        checkIntoDB(userInfo);
+        sendMail(userInfo,token);
+        return 1;
+    }
+
+    public void checkIntoDB(UserInfo userInfo) throws UserException {
         int count = userDao.addUser(userInfo);
         if (count != 1) {
             throw new UserException(ExceptionEnum.REGISTER_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        sendMail(userInfo,token);
-        return 1;
     }
 
     public void checkUnique(UserInfo userInfo) throws UserException {
@@ -115,17 +130,41 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    @Transactional(rollbackFor = {RuntimeException.class,DataCastleException.class})
+    @Transactional(rollbackFor = {RuntimeException.class,UserException.class,SQLException.class})
     public UserSignResult userLogin(SignInUser signInUser,String captchaCode) throws UserException {
+        checkVerifyCode(captchaCode, signInUser.getVerifyCode());
+        UserInfo user = userDao.getUser(signInUser.getMail());
+        checkUser(user, signInUser);
+        //将用户加入缓存
+        boolean matched = checkMatched(user);
+        String token = UUID.randomUUID().toString();
+        String encoderToken = passwordEncoderService.encode(token);
+        String mail = user.getMail();
+        String key = createKey.getKey(LOGIN,mail);
+        jedisAdapter.setex(key, 8640000, encoderToken);
+        String username = user.getUsername();
+        return new UserSignResult(token, mail, username,matched);
+    }
 
-        String verifyKey = captchaCode;
+
+    public boolean checkMatched(UserInfo user) {
+        if (user.getTeamId() != 0) {
+            return true;
+        }
+        return false;
+    }
+
+    public void checkVerifyCode(String key,String verifyCode) throws UserException {
+        String verifyKey = key;
         if (!jedisAdapter.exists(verifyKey)) {
             throw new UserException(VerifyCodeEnum.REPEATE_GETCODE.getMsg(),HttpStatus.FORBIDDEN);
         }
-        if (!jedisAdapter.get(verifyKey).equals(signInUser.getVerifyCode())) {
+        if (!jedisAdapter.get(verifyKey).equals(verifyCode)) {
             throw new UserException(VerifyCodeEnum.ERROR_CODE.getMsg(), HttpStatus.FORBIDDEN);
         }
-        UserInfo user = userDao.getUser(signInUser.getMail());
+    }
+
+    public void checkUser(UserInfo user, SignInUser signInUser) throws UserException {
         if (user.getEnable() != 1) {
             throw new UserException(ExceptionEnum.NO_ENABLE.getMsg(), HttpStatus.FORBIDDEN);
         }
@@ -135,13 +174,5 @@ public class UserServiceImpl implements UserService{
         if (!passwordEncoderService.match(signInUser.getPwd(), user.getPwd())) {
             throw new UserException(ExceptionEnum.ERROR_PWD.getMsg(), HttpStatus.FORBIDDEN);
         }
-        //将用户加入缓存
-        String token = UUID.randomUUID().toString();
-        String encoderToken = passwordEncoderService.encode(token);
-        String mail = user.getMail();
-        String key = createKey.getKey(LOGIN,mail);
-        jedisAdapter.setex(key, 8640000, encoderToken);
-        String username = user.getUsername();
-        return new UserSignResult(token, mail, username);
     }
 }

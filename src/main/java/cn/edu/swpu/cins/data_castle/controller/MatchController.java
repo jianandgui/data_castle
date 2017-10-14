@@ -1,5 +1,6 @@
 package cn.edu.swpu.cins.data_castle.controller;
 
+import cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult;
 import cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam;
 import cn.edu.swpu.cins.data_castle.exception.DataCastleException;
 import cn.edu.swpu.cins.data_castle.exception.MatchException;
@@ -24,7 +25,7 @@ public class MatchController {
         try {
             return new ResponseEntity<>(matchService.addTeam(matchTeam), HttpStatus.OK);
         } catch (DataCastleException e) {
-            return new ResponseEntity<>(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(new ExceptionResult(e.getMessage()), e.getStatus());
         }
     }
 
@@ -34,7 +35,7 @@ public class MatchController {
             return new ResponseEntity<>(matchService.saveFile(file, mail), HttpStatus.OK);
 //            return new ResponseEntity("上传成功", HttpStatus.OK);
         } catch (DataCastleException e) {
-            return new ResponseEntity<>(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(new ExceptionResult(e.getMessage()), e.getStatus());
         }
     }
 
@@ -43,7 +44,7 @@ public class MatchController {
         try {
             return new ResponseEntity<>(matchService.queryRankList(), HttpStatus.OK);
         } catch (DataCastleException e) {
-            return new ResponseEntity<>(e.getMessage(), e.getStatus());
+            return new ResponseEntity<>(new ExceptionResult(e.getMessage()), e.getStatus());
         }
     }
 }
