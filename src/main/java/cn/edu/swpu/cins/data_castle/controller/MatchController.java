@@ -2,6 +2,7 @@ package cn.edu.swpu.cins.data_castle.controller;
 
 import cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult;
 import cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam;
+import cn.edu.swpu.cins.data_castle.enums.MatchEnum;
 import cn.edu.swpu.cins.data_castle.exception.DataCastleException;
 import cn.edu.swpu.cins.data_castle.exception.MatchException;
 import cn.edu.swpu.cins.data_castle.service.MatchService;
@@ -32,7 +33,8 @@ public class MatchController {
     @PostMapping("answer")
     public ResponseEntity<?> uploadFile(@RequestHeader("data-castle-mail") String mail, @RequestPart("answer") MultipartFile file) {
         try {
-            return new ResponseEntity<>(matchService.saveFile(file, mail), HttpStatus.OK);
+            matchService.saveFile(file, mail);
+            return new ResponseEntity(MatchEnum.FILE_UPLOAD_SUCCESS.getMsg(), HttpStatus.OK);
 //            return new ResponseEntity("上传成功", HttpStatus.OK);
         } catch (DataCastleException e) {
             return new ResponseEntity<>(new ExceptionResult(e.getMessage()), e.getStatus());

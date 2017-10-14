@@ -49,7 +49,7 @@ data_castle:
 
 logging:
   file: data-castle.log
-  level: error
+  level: info
 
 endpoints:
   shutdown:
