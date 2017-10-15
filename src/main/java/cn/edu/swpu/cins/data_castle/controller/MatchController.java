@@ -31,7 +31,7 @@ public class MatchController {
     }
 
     @PostMapping("answer")
-    public ResponseEntity<?> uploadFile(@RequestHeader("data_castle_mail") String mail, @RequestPart("answer") MultipartFile file) {
+    public ResponseEntity<?> uploadFile(@RequestHeader("dataCastleMail") String mail, @RequestPart("answer") MultipartFile file) {
         try {
             matchService.saveFile(file, mail);
             return new ResponseEntity(new ExceptionResult(MatchEnum.FILE_UPLOAD_SUCCESS.getMsg()), HttpStatus.OK);
