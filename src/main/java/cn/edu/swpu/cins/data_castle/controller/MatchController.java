@@ -34,7 +34,7 @@ public class MatchController {
     public ResponseEntity<?> uploadFile(@RequestHeader("data_castle_mail") String mail, @RequestPart("answer") MultipartFile file) {
         try {
             matchService.saveFile(file, mail);
-            return new ResponseEntity(MatchEnum.FILE_UPLOAD_SUCCESS.getMsg(), HttpStatus.OK);
+            return new ResponseEntity(new ExceptionResult(MatchEnum.FILE_UPLOAD_SUCCESS.getMsg()), HttpStatus.OK);
 //            return new ResponseEntity("上传成功", HttpStatus.OK);
         } catch (DataCastleException e) {
             return new ResponseEntity<>(new ExceptionResult(e.getMessage()), e.getStatus());
