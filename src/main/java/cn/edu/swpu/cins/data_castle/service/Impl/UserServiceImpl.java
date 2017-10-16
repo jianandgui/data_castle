@@ -111,6 +111,11 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public int enableAccount(String mail, String token) throws OperationFailureException, UserException {
+        checkEmailAndToken(mail,token);
+        return 1;
+    }
+
+    public void checkEmailAndToken(String mail, String token) throws OperationFailureException, UserException {
         String Tmail = urlCoderService.decode(mail);
         String Ttoken = urlCoderService.decode(token);
         String key = createKey.getKey(REGISTER,Tmail);
@@ -126,7 +131,6 @@ public class UserServiceImpl implements UserService{
         if (userDao.updateUser(Tmail, 0) != 1) {
             throw new UserException(ExceptionEnum.FAILED_ENABLE.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-        return 1;
     }
 
     @Override
