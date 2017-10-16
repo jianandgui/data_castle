@@ -45,7 +45,7 @@ data_castle:
         user:
            enable: dataCastle/user/enable
    answer:
-     location: /optdata-castle/match-answer
+     location: /opt/data-castle/match-answer
 
 logging:
   file: data-castle.log
