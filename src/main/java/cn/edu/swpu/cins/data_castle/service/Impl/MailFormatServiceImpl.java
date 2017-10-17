@@ -34,7 +34,8 @@ public class MailFormatServiceImpl implements MailFormatService{
         final String previous = "请访问下面的链接以激活您的邮箱（<b>30分钟有效</b>）<br/>";
         String baseMail = urlCoderService.encode(mail);
         String baseToken = urlCoderService.encode(token);
-        String link = "http://"+ host + ':' + port + "/" + enablePath + "?mail=" +	baseMail + "&token=" + baseToken;
+        //String link = "http://"+ host + ':' + port + "/" + enablePath + "?mail=" +	baseMail + "&token=" + baseToken;
+        String link = "http://"+ host + ':' + port + "/" + "cins/passCheck/index.html" + "?mail=" +	baseMail + "&token=" + baseToken;
         String htmlLink = "<a href='" + link + "' target='_blank'>" + link + "</a>";
         return previous + htmlLink;
     }
