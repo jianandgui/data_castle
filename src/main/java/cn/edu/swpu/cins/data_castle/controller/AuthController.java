@@ -65,7 +65,6 @@ public class AuthController {
     @PostMapping(value = "signIn")
     public ResponseEntity userLogin(@RequestBody SignInUser signInUser, @RequestHeader("captcha-code") String captchaCode) {
         try {
-//            System.out.println("我是测试");
             return new ResponseEntity(userService.userLogin(signInUser, captchaCode), HttpStatus.OK);
         } catch (UserException e) {
             return new ResponseEntity(new ExceptionResult(e.getMessage()), e.getStatus());

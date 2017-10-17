@@ -5743,3 +5743,827 @@ java.sql.SQLException: Access denied for user 'dataCastle'@'localhost' (using pa
 2017-10-17 12:57:33.513  INFO 10869 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
 
 2017-10-17 12:57:33.520  INFO 10869 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@21f88977,{}>
+2017-10-17 14:34:24.947  INFO 10869 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 14:34:24.948  INFO 10869 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : arg : org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper@1453df02
+2017-10-17 14:34:24.948  INFO 10869 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 14:34:24.948  INFO 10869 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin
+2017-10-17 14:34:25.168  INFO 10869 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,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
+gg==,{}>
+2017-10-17 14:35:13.675  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 14:35:13.676  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@6e616774
+2017-10-17 14:35:13.676  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : arg : 87b50f32-4662-4d4b-a75b-f584746db964
+2017-10-17 14:35:13.676  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 14:35:13.676  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister
+2017-10-17 14:35:13.677  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:35:13.677  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.insertUser
+2017-10-17 14:35:13.677  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@6e616774
+2017-10-17 14:35:13.677  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : 87b50f32-4662-4d4b-a75b-f584746db964
+2017-10-17 14:35:13.677  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:35:13.685  INFO 10869 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@78a22378,{}>
+2017-10-17 14:36:17.798  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 14:36:17.798  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@3247157b
+2017-10-17 14:36:17.798  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : arg : 87b50f32-4662-4d4b-a75b-f584746db964
+2017-10-17 14:36:17.798  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 14:36:17.798  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister
+2017-10-17 14:36:17.799  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:36:17.800  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.insertUser
+2017-10-17 14:36:17.800  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@3247157b
+2017-10-17 14:36:17.800  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : 87b50f32-4662-4d4b-a75b-f584746db964
+2017-10-17 14:36:17.800  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:36:17.802  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:36:17.802  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-17 14:36:17.802  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-17 14:36:17.802  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:36:17.903  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:36:17.903  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$JU5PkHmOBNAg3P4pXfd40.uo762QB/c0Z9.WBFt1Yz./NAm8/YOCO
+2017-10-17 14:36:17.903  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:36:17.911  INFO 10869 --- [http-nio-8796-exec-7] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-10-17 14:36:17.939  INFO 10869 --- [http-nio-8796-exec-7] o.s.jdbc.support.SQLErrorCodesFactory    : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-10-17 14:36:17.947  INFO 10869 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : controller throw 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '201531060587' for key 'school_number_UNIQUE'
+### The error may involve cn.edu.swpu.cins.data_castle.dao.UserDao.addUser-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO         user_info         (username,pwd,mail,school_number)         VALUE         (?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '201531060587' for key 'school_number_UNIQUE'
+; SQL []; Duplicate entry '201531060587' for key 'school_number_UNIQUE'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '201531060587' for key 'school_number_UNIQUE'
+2017-10-17 14:36:17.959 ERROR 10869 --- [http-nio-8796-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '201531060587' for key 'school_number_UNIQUE'
+### The error may involve cn.edu.swpu.cins.data_castle.dao.UserDao.addUser-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO         user_info         (username,pwd,mail,school_number)         VALUE         (?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '201531060587' for key 'school_number_UNIQUE'
+; SQL []; Duplicate entry '201531060587' for key 'school_number_UNIQUE'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '201531060587' for key 'school_number_UNIQUE'] with root cause
+
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '201531060587' for key 'school_number_UNIQUE'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_112]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_112]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:935) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2527) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2680) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2487) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1858) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.PreparedStatement.execute(PreparedStatement.java:1197) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]
+	at org.apache.tomcat.jdbc.pool.StatementFacade$StatementProxy.invoke(StatementFacade.java:114) ~[tomcat-jdbc-8.5.20.jar:na]
+	at com.sun.proxy.$Proxy109.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185) ~[mybatis-3.4.5.jar:3.4.5]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at com.sun.proxy.$Proxy92.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278) ~[mybatis-spring-1.3.1.jar:1.3.1]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:57) ~[mybatis-3.4.5.jar:3.4.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:59) ~[mybatis-3.4.5.jar:3.4.5]
+	at com.sun.proxy.$Proxy93.addUser(Unknown Source) ~[na:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:136) ~[spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at com.sun.proxy.$Proxy95.addUser(Unknown Source) ~[na:na]
+	at cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.checkIntoDB(UserServiceImpl.java:74) ~[classes/:na]
+	at cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.insertUser(UserServiceImpl.java:68) ~[classes/:na]
+	at cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl$$FastClassBySpringCGLIB$$f91e48cf.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99) ~[spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:282) ~[spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96) ~[spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl$$EnhancerBySpringCGLIB$$205029f0.insertUser(<generated>) ~[classes/:na]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(AuthController.java:57) ~[classes/:na]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController$$FastClassBySpringCGLIB$$923d74fc.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController$$EnhancerBySpringCGLIB$$49e08b0a.userRegister(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) ~[spring-boot-actuator-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) ~[spring-boot-actuator-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_112]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_112]
+
+2017-10-17 14:39:47.385  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 14:39:47.385  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@242f8244
+2017-10-17 14:39:47.385  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : arg : 87b50f32-4662-4d4b-a75b-f584746db964
+2017-10-17 14:39:47.385  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 14:39:47.385  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister
+2017-10-17 14:39:47.386  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:39:47.387  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.insertUser
+2017-10-17 14:39:47.387  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@242f8244
+2017-10-17 14:39:47.387  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : arg : 87b50f32-4662-4d4b-a75b-f584746db964
+2017-10-17 14:39:47.387  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:39:47.388  INFO 10869 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@c588685,{}>
+2017-10-17 14:39:53.056  INFO 10869 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 14:39:53.056  INFO 10869 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : arg : org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper@3cf6e2e9
+2017-10-17 14:39:53.056  INFO 10869 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 14:39:53.056  INFO 10869 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin
+2017-10-17 14:39:53.079  INFO 10869 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,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,{}>
+2017-10-17 14:40:26.757  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 14:40:26.757  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@29bb587a
+2017-10-17 14:40:26.758  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : arg : 1a51ddf1-0477-4f6a-b434-70d20a41aa1c
+2017-10-17 14:40:26.758  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 14:40:26.758  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister
+2017-10-17 14:40:26.759  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.759  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.insertUser
+2017-10-17 14:40:26.759  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@29bb587a
+2017-10-17 14:40:26.759  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : 1a51ddf1-0477-4f6a-b434-70d20a41aa1c
+2017-10-17 14:40:26.759  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.761  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.762  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-17 14:40:26.762  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-17 14:40:26.762  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.858  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.858  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$o/fcfNPJWQE1U.JvGuo8OexwqO0qQiF4.GOMEAMowEPdxwgr7OjcK
+2017-10-17 14:40:26.859  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.860  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.860  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MailFormatServiceImpl.getSignUpSubject
+2017-10-17 14:40:26.860  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : 木易
+2017-10-17 14:40:26.860  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.862  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.862  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : service return : 尊敬的木易，欢迎注册创数据团队data_castle活动
+2017-10-17 14:40:26.862  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.862  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.862  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MailFormatServiceImpl.getSignUpContent
+2017-10-17 14:40:26.862  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-17 14:40:26.862  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : be3dd3aa-95c1-4fe2-87fa-d97d607ba13e
+2017-10-17 14:40:26.862  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.863  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.863  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.URLCoderServiceImpl.encode
+2017-10-17 14:40:26.863  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-17 14:40:26.863  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : service return : ODc5NjA0MjEzQHFxLmNvbQ==
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.URLCoderServiceImpl.encode
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : be3dd3aa-95c1-4fe2-87fa-d97d607ba13e
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : service return : YmUzZGQzYWEtOTVjMS00ZmUyLTg3ZmEtZDk3ZDYwN2JhMTNl
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : service return : 请访问下面的链接以激活您的邮箱（<b>30分钟有效</b>）<br/><a href='http://182.150.37.58:9595/dataCastle/user/enable?mail=ODc5NjA0MjEzQHFxLmNvbQ==&token=YmUzZGQzYWEtOTVjMS00ZmUyLTg3ZmEtZDk3ZDYwN2JhMTNl' target='_blank'>http://182.150.37.58:9595/dataCastle/user/enable?mail=ODc5NjA0MjEzQHFxLmNvbQ==&token=YmUzZGQzYWEtOTVjMS00ZmUyLTg3ZmEtZDk3ZDYwN2JhMTNl</a>
+2017-10-17 14:40:26.865  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.911  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.911  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : service return : 1
+2017-10-17 14:40:26.911  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.915  INFO 10869 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>
+2017-10-17 14:40:26.915  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:26.915  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MailServiceImpl.sendMail
+2017-10-17 14:40:26.915  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-17 14:40:26.915  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 尊敬的木易，欢迎注册创数据团队data_castle活动
+2017-10-17 14:40:26.915  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 请访问下面的链接以激活您的邮箱（<b>30分钟有效</b>）<br/><a href='http://182.150.37.58:9595/dataCastle/user/enable?mail=ODc5NjA0MjEzQHFxLmNvbQ==&token=YmUzZGQzYWEtOTVjMS00ZmUyLTg3ZmEtZDk3ZDYwN2JhMTNl' target='_blank'>http://182.150.37.58:9595/dataCastle/user/enable?mail=ODc5NjA0MjEzQHFxLmNvbQ==&token=YmUzZGQzYWEtOTVjMS00ZmUyLTg3ZmEtZDk3ZDYwN2JhMTNl</a>
+2017-10-17 14:40:26.915  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:28.383  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 14:40:28.383  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : service return : null
+2017-10-17 14:40:28.383  INFO 10869 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:06:12.687  INFO 13752 --- [main] c.e.s.cins.data_castle.dao.UserDaoTest   : Starting UserDaoTest on yang with PID 13752 (started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-17 15:06:12.689  INFO 13752 --- [main] c.e.s.cins.data_castle.dao.UserDaoTest   : No active profile set, falling back to default profiles: default
+2017-10-17 15:06:12.759  INFO 13752 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@673fdbce: startup date [Tue Oct 17 15:06:12 CST 2017]; root of context hierarchy
+2017-10-17 15:06:14.594  INFO 13752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-17 15:06:17.176  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-17 15:06:17.177  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-17 15:06:17.177  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-17 15:06:17.178  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-17 15:06:17.179  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-17 15:06:17.180  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-17 15:06:17.180  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-17 15:06:17.185  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-17 15:06:17.185  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-17 15:06:17.506  INFO 13752 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@673fdbce: startup date [Tue Oct 17 15:06:12 CST 2017]; root of context hierarchy
+2017-10-17 15:06:18.029  INFO 13752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c48b72c, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e1a986c, org.springframework.security.web.header.HeaderWriterFilter@153cb763, org.springframework.security.web.authentication.logout.LogoutFilter@78d23d6a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@46a795de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68af87ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e1ae763, org.springframework.security.web.session.SessionManagementFilter@44aa2e13, org.springframework.security.web.access.ExceptionTranslationFilter@5460edd3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24876a7e]
+2017-10-17 15:06:18.070  INFO 13752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@195113de, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ebc955b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6282b9f5, org.springframework.security.web.header.HeaderWriterFilter@4962b41e, org.springframework.web.filter.CorsFilter@21a46ff1, org.springframework.security.web.authentication.logout.LogoutFilter@7f5fcfe9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@632b305d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b5f9003, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c11d32, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11b5f4e2, org.springframework.security.web.session.SessionManagementFilter@4fecf308, org.springframework.security.web.access.ExceptionTranslationFilter@662be9f7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@475f5672]
+2017-10-17 15:06:20.087  WARN 13752 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2017-10-17 15:06:20.123  INFO 13752 --- [main] c.e.s.cins.data_castle.dao.UserDaoTest   : Started UserDaoTest in 8.189 seconds (JVM running for 9.45)
+2017-10-17 15:06:20.702  INFO 13752 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@673fdbce: startup date [Tue Oct 17 15:06:12 CST 2017]; root of context hierarchy
+2017-10-17 15:06:49.482  INFO 13813 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Starting MatchDaoTest on yang with PID 13813 (started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-17 15:06:49.483  INFO 13813 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : No active profile set, falling back to default profiles: default
+2017-10-17 15:06:49.551  INFO 13813 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:06:49 CST 2017]; root of context hierarchy
+2017-10-17 15:06:51.198  INFO 13813 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-17 15:06:53.745  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-17 15:06:53.747  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-17 15:06:53.748  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-17 15:06:53.748  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-17 15:06:53.751  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-17 15:06:53.752  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-17 15:06:53.753  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-17 15:06:53.757  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-17 15:06:53.758  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-17 15:06:54.206  INFO 13813 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:06:49 CST 2017]; root of context hierarchy
+2017-10-17 15:06:54.737  INFO 13813 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c297897, org.springframework.security.web.context.SecurityContextPersistenceFilter@1310fcb0, org.springframework.security.web.header.HeaderWriterFilter@4665428b, org.springframework.security.web.authentication.logout.LogoutFilter@613f7eb7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e8fdd19, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3375ebd3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33e0c716, org.springframework.security.web.session.SessionManagementFilter@1213ffbc, org.springframework.security.web.access.ExceptionTranslationFilter@5f08fe00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4776e209]
+2017-10-17 15:06:54.769  INFO 13813 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@6e1ae763, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62d40e31, org.springframework.security.web.context.SecurityContextPersistenceFilter@480cbe2e, org.springframework.security.web.header.HeaderWriterFilter@3b78c683, org.springframework.web.filter.CorsFilter@650aa077, org.springframework.security.web.authentication.logout.LogoutFilter@67f9cb52, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7fd4e815, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c3f1658, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@110e9982, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ce29a2d, org.springframework.security.web.session.SessionManagementFilter@7f5614f9, org.springframework.security.web.access.ExceptionTranslationFilter@d653e41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1625789b]
+2017-10-17 15:06:56.572  WARN 13813 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2017-10-17 15:06:56.602  INFO 13813 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Started MatchDaoTest in 7.976 seconds (JVM running for 9.163)
+2017-10-17 15:06:57.116  INFO 13813 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:06:49 CST 2017]; root of context hierarchy
+2017-10-17 15:08:50.662  INFO 13960 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Starting MatchDaoTest on yang with PID 13960 (started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-17 15:08:50.669  INFO 13960 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : No active profile set, falling back to default profiles: default
+2017-10-17 15:08:50.725  INFO 13960 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:08:50 CST 2017]; root of context hierarchy
+2017-10-17 15:08:52.334  INFO 13960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-17 15:08:54.572  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-17 15:08:54.574  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-17 15:08:54.574  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-17 15:08:54.574  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-17 15:08:54.576  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-17 15:08:54.576  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-17 15:08:54.577  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-17 15:08:54.581  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-17 15:08:54.581  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-17 15:08:55.124  INFO 13960 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:08:50 CST 2017]; root of context hierarchy
+2017-10-17 15:08:55.566  INFO 13960 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71a4f441, org.springframework.security.web.context.SecurityContextPersistenceFilter@643ba1ed, org.springframework.security.web.header.HeaderWriterFilter@40717ed, org.springframework.security.web.authentication.logout.LogoutFilter@68af87ad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26582ca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@dbddbe3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@24876a7e, org.springframework.security.web.session.SessionManagementFilter@1f78d415, org.springframework.security.web.access.ExceptionTranslationFilter@415795f3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d653e41]
+2017-10-17 15:08:55.594  INFO 13960 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@6d293993, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@475f5672, org.springframework.security.web.context.SecurityContextPersistenceFilter@79d7035, org.springframework.security.web.header.HeaderWriterFilter@7ce29a2d, org.springframework.web.filter.CorsFilter@616a06e3, org.springframework.security.web.authentication.logout.LogoutFilter@3086f480, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58278366, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@372461a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fffb692, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42297bdf, org.springframework.security.web.session.SessionManagementFilter@457a5b2d, org.springframework.security.web.access.ExceptionTranslationFilter@650aa077, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4962b41e]
+2017-10-17 15:08:57.259  WARN 13960 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2017-10-17 15:08:57.293  INFO 13960 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Started MatchDaoTest in 7.525 seconds (JVM running for 8.757)
+2017-10-17 15:08:57.918  INFO 13960 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:08:50 CST 2017]; root of context hierarchy
+2017-10-17 15:11:25.880  INFO 14091 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Starting MatchDaoTest on yang with PID 14091 (started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-17 15:11:25.882  INFO 14091 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : No active profile set, falling back to default profiles: default
+2017-10-17 15:11:25.965  INFO 14091 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:11:25 CST 2017]; root of context hierarchy
+2017-10-17 15:11:27.646  INFO 14091 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-17 15:11:29.997  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-17 15:11:29.998  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-17 15:11:29.999  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-17 15:11:29.999  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-17 15:11:30.001  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-17 15:11:30.001  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-17 15:11:30.002  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-17 15:11:30.006  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-17 15:11:30.007  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-17 15:11:30.404  INFO 14091 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:11:25 CST 2017]; root of context hierarchy
+2017-10-17 15:11:30.871  INFO 14091 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@491cafec, org.springframework.security.web.context.SecurityContextPersistenceFilter@37e0056e, org.springframework.security.web.header.HeaderWriterFilter@15d3793b, org.springframework.security.web.authentication.logout.LogoutFilter@27960b1e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fe2965c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c2cf597, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cbd40c1, org.springframework.security.web.session.SessionManagementFilter@35787726, org.springframework.security.web.access.ExceptionTranslationFilter@1a21f43f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50b734c4]
+2017-10-17 15:11:30.906  INFO 14091 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@372461a9, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fffb692, org.springframework.security.web.context.SecurityContextPersistenceFilter@2de9ca6, org.springframework.security.web.header.HeaderWriterFilter@73608eb0, org.springframework.web.filter.CorsFilter@48cb2d73, org.springframework.security.web.authentication.logout.LogoutFilter@24876a7e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c48b72c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59018eed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ee39e73, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@243bf087, org.springframework.security.web.session.SessionManagementFilter@67f9cb52, org.springframework.security.web.access.ExceptionTranslationFilter@5eb0a686, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fd4e815]
+2017-10-17 15:11:32.688  WARN 14091 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2017-10-17 15:11:32.710  INFO 14091 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Started MatchDaoTest in 7.665 seconds (JVM running for 8.608)
+2017-10-17 15:11:33.108  INFO 14091 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-10-17 15:11:33.155  INFO 14091 --- [main] o.s.jdbc.support.SQLErrorCodesFactory    : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-10-17 15:11:33.174  INFO 14091 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:11:25 CST 2017]; root of context hierarchy
+2017-10-17 15:12:08.849  INFO 14159 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Starting MatchDaoTest on yang with PID 14159 (started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-17 15:12:08.855  INFO 14159 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : No active profile set, falling back to default profiles: default
+2017-10-17 15:12:08.943  INFO 14159 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:12:08 CST 2017]; root of context hierarchy
+2017-10-17 15:12:11.099  INFO 14159 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-17 15:12:13.580  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-17 15:12:13.581  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-17 15:12:13.582  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-17 15:12:13.582  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-17 15:12:13.583  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-17 15:12:13.584  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-17 15:12:13.584  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-17 15:12:13.588  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-17 15:12:13.588  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-17 15:12:14.042  INFO 14159 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:12:08 CST 2017]; root of context hierarchy
+2017-10-17 15:12:14.458  INFO 14159 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@650aa077, org.springframework.security.web.context.SecurityContextPersistenceFilter@256a0d95, org.springframework.security.web.header.HeaderWriterFilter@6f731759, org.springframework.security.web.authentication.logout.LogoutFilter@2dd1086, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4bf03fee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7418d76e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ce29a2d, org.springframework.security.web.session.SessionManagementFilter@5e1a986c, org.springframework.security.web.access.ExceptionTranslationFilter@565aa4ac, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c4d2c44]
+2017-10-17 15:12:14.485  INFO 14159 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@11b5f4e2, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bcae9, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f9dda71, org.springframework.security.web.header.HeaderWriterFilter@5b5f9003, org.springframework.web.filter.CorsFilter@5aa781f2, org.springframework.security.web.authentication.logout.LogoutFilter@552fee7a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@17222c11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58278366, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f5fcfe9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58feb6b0, org.springframework.security.web.session.SessionManagementFilter@7c11d32, org.springframework.security.web.access.ExceptionTranslationFilter@6282b9f5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66e827a8]
+2017-10-17 15:12:16.180  WARN 14159 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2017-10-17 15:12:16.203  INFO 14159 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Started MatchDaoTest in 8.223 seconds (JVM running for 9.335)
+2017-10-17 15:12:16.743  INFO 14159 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:12:08 CST 2017]; root of context hierarchy
+2017-10-17 15:13:23.338  INFO 14246 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Starting MatchDaoTest on yang with PID 14246 (started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-17 15:13:23.343  INFO 14246 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : No active profile set, falling back to default profiles: default
+2017-10-17 15:13:23.410  INFO 14246 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:13:23 CST 2017]; root of context hierarchy
+2017-10-17 15:13:25.778  INFO 14246 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-17 15:13:28.709  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-17 15:13:28.711  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-17 15:13:28.714  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-17 15:13:28.715  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-17 15:13:28.720  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-17 15:13:28.727  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-17 15:13:28.728  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-17 15:13:28.738  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-17 15:13:28.739  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-17 15:13:29.246  INFO 14246 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:13:23 CST 2017]; root of context hierarchy
+2017-10-17 15:13:29.849  INFO 14246 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@237add, org.springframework.security.web.context.SecurityContextPersistenceFilter@27976390, org.springframework.security.web.header.HeaderWriterFilter@261b9a37, org.springframework.security.web.authentication.logout.LogoutFilter@1c046c92, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@415795f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@100aa331, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@491cafec, org.springframework.security.web.session.SessionManagementFilter@6e8fdd19, org.springframework.security.web.access.ExceptionTranslationFilter@9df564f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@54c425b1]
+2017-10-17 15:13:29.890  INFO 14246 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@79d7035, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@372461a9, org.springframework.security.web.context.SecurityContextPersistenceFilter@67f9cb52, org.springframework.security.web.header.HeaderWriterFilter@5eb0a686, org.springframework.web.filter.CorsFilter@5fffb692, org.springframework.security.web.authentication.logout.LogoutFilter@71a4f441, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1142d377, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2de9ca6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59018eed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48cb2d73, org.springframework.security.web.session.SessionManagementFilter@73608eb0, org.springframework.security.web.access.ExceptionTranslationFilter@110e9982, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a9ec80e]
+2017-10-17 15:13:31.797  WARN 14246 --- [main] .s.b.a.a.EndpointWebMvcAutoConfiguration : Could not start embedded management container on different port (management endpoints are still available through JMX)
+2017-10-17 15:13:31.835  INFO 14246 --- [main] c.e.s.cins.data_castle.dao.MatchDaoTest  : Started MatchDaoTest in 9.479 seconds (JVM running for 10.495)
+2017-10-17 15:13:32.333  INFO 14246 --- [main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-10-17 15:13:32.378  INFO 14246 --- [main] o.s.jdbc.support.SQLErrorCodesFactory    : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-10-17 15:13:32.399  INFO 14246 --- [Thread-5] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5965d37: startup date [Tue Oct 17 15:13:23 CST 2017]; root of context hierarchy
+2017-10-17 15:13:43.649  INFO 10869 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6572421: startup date [Tue Oct 17 12:57:01 CST 2017]; root of context hierarchy
+2017-10-17 15:13:43.654  INFO 10869 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-17 15:13:43.656  INFO 10869 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-10-17 15:13:45.461  INFO 14312 --- [main] c.e.s.c.d.DataCastleApplication          : Starting DataCastleApplication on yang with PID 14312 (/home/yang/idea_work_space/data_castle/out/production/classes started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-17 15:13:45.466  INFO 14312 --- [main] c.e.s.c.d.DataCastleApplication          : No active profile set, falling back to default profiles: default
+2017-10-17 15:13:45.556  INFO 14312 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6572421: startup date [Tue Oct 17 15:13:45 CST 2017]; root of context hierarchy
+2017-10-17 15:13:46.777  INFO 14312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-17 15:13:47.804  INFO 14312 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8796 (http)
+2017-10-17 15:13:47.814  INFO 14312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-17 15:13:47.815  INFO 14312 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-17 15:13:47.875  INFO 14312 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-17 15:13:47.876  INFO 14312 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2332 ms
+2017-10-17 15:13:48.091  INFO 14312 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-17 15:13:48.091  INFO 14312 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-17 15:13:48.092  INFO 14312 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-10-17 15:13:48.093  INFO 14312 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-17 15:13:48.093  INFO 14312 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-17 15:13:48.093  INFO 14312 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-17 15:13:48.790  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-17 15:13:48.791  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-17 15:13:48.791  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-17 15:13:48.791  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-17 15:13:48.792  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-17 15:13:48.792  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-17 15:13:48.793  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-17 15:13:48.794  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-17 15:13:48.795  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-17 15:13:48.886  INFO 14312 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6572421: startup date [Tue Oct 17 15:13:45 CST 2017]; root of context hierarchy
+2017-10-17 15:13:49.238  INFO 14312 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11b32a14, org.springframework.security.web.context.SecurityContextPersistenceFilter@51a651c1, org.springframework.security.web.header.HeaderWriterFilter@629984eb, org.springframework.security.web.authentication.logout.LogoutFilter@2e1b374c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c184d4d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5426cb36, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c33e528, org.springframework.security.web.session.SessionManagementFilter@220c9a63, org.springframework.security.web.access.ExceptionTranslationFilter@62cba181, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@343fddd9]
+2017-10-17 15:13:49.512  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-10-17 15:13:49.513  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.513  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.514  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-17 15:13:49.514  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-10-17 15:13:49.515  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.516  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-17 15:13:49.517  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-17 15:13:49.517  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.518  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.519  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-17 15:13:49.519  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.520  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-10-17 15:13:49.521  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-10-17 15:13:49.522  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.523  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.524  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.525  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-17 15:13:49.525  INFO 14312 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2017-10-17 15:13:49.535  INFO 14312 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@5f366587, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6003ad65, org.springframework.security.web.context.SecurityContextPersistenceFilter@104dc1a2, org.springframework.security.web.header.HeaderWriterFilter@1989e8c6, org.springframework.web.filter.CorsFilter@2ec99035, org.springframework.security.web.authentication.logout.LogoutFilter@2792b416, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@27e2287c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67d32a54, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@314a31b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60743cdb, org.springframework.security.web.session.SessionManagementFilter@35c4697c, org.springframework.security.web.access.ExceptionTranslationFilter@202ae86f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50b0afd7]
+2017-10-17 15:13:50.320  INFO 14312 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-17 15:13:50.330  INFO 14312 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-17 15:13:50.423  INFO 14312 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8796 (http)
+2017-10-17 15:13:50.426  INFO 14312 --- [main] c.e.s.c.d.DataCastleApplication          : Started DataCastleApplication in 5.371 seconds (JVM running for 6.081)
+2017-10-17 15:14:11.163  INFO 14312 --- [http-nio-8796-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-17 15:14:11.164  INFO 14312 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-17 15:14:11.178  INFO 14312 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2017-10-17 15:14:11.201  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:11.202  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-17 15:14:11.202  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 494f377e-16d3-4f8f-b86a-dec0716e939d
+2017-10-17 15:14:11.202  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$mRk1tb29W/AsmrvcYwZ0cecygeHyMHwURUTT..uo86oCzTGbB4Rpy
+2017-10-17 15:14:11.202  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:11.301  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:11.301  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-17 15:14:11.301  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:11.345  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 15:14:11.345  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@1cbbb3a4
+2017-10-17 15:14:11.345  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 15:14:11.345  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-17 15:14:11.523  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:11.523  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-17 15:14:11.523  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@1cbbb3a4
+2017-10-17 15:14:11.523  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:11.550  INFO 14312 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@332cab69,{}>
+2017-10-17 15:14:59.265  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:59.265  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-17 15:14:59.265  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 494f377e-16d3-4f8f-b86a-dec0716e939d
+2017-10-17 15:14:59.265  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$mRk1tb29W/AsmrvcYwZ0cecygeHyMHwURUTT..uo86oCzTGbB4Rpy
+2017-10-17 15:14:59.266  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:59.362  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:59.362  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-17 15:14:59.362  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:59.363  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 15:14:59.363  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@25aa9b46
+2017-10-17 15:14:59.363  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 15:14:59.363  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-17 15:14:59.364  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:59.364  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-17 15:14:59.364  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@25aa9b46
+2017-10-17 15:14:59.364  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:14:59.369  INFO 14312 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@1a6d77b3,{}>
+2017-10-17 15:15:13.268  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:15:13.268  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-17 15:15:13.268  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : 494f377e-16d3-4f8f-b86a-dec0716e939d
+2017-10-17 15:15:13.268  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$mRk1tb29W/AsmrvcYwZ0cecygeHyMHwURUTT..uo86oCzTGbB4Rpy
+2017-10-17 15:15:13.268  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:15:13.369  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:15:13.370  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-17 15:15:13.370  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:15:13.371  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-17 15:15:13.371  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@6118cb89
+2017-10-17 15:15:13.371  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-17 15:15:13.371  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-17 15:15:13.372  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:15:13.372  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-17 15:15:13.372  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@6118cb89
+2017-10-17 15:15:13.372  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:15:13.389  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:15:13.390  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : service return : 1
+2017-10-17 15:15:13.390  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-17 15:15:13.395  INFO 14312 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>

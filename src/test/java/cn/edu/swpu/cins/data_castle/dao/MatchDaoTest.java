@@ -19,7 +19,8 @@ public class MatchDaoTest {
     public void saveTeam() throws Exception {
         TeamInfo teamInfo = new TeamInfo();
         teamInfo.setTeamName("test");
-        matchDao.saveTeam(teamInfo);
+        int id = matchDao.saveTeam(teamInfo);
+        System.out.println(teamInfo.getId());
     }
 
     @Test

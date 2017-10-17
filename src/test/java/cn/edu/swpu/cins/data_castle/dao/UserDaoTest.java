@@ -1,6 +1,7 @@
 package cn.edu.swpu.cins.data_castle.dao;
 
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
+import cn.edu.swpu.cins.data_castle.enums.ExceptionEnum;
 import jdk.nashorn.internal.runtime.logging.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,6 +39,12 @@ public class UserDaoTest {
         String mail = "879604213@qq.com";
         int flag = 789;
         userDao.updateUser(mail, flag);
+    }
+
+    @Test
+    public void getUserBySchoolNum() throws Exception{
+
+        //System.out.println(userDao.getUserBySchoolNum(2013141212));
     }
 
 }

@@ -57,7 +57,8 @@ public class MatchServiceImpl implements MatchService {
     }
 
     public void checkTeamSaveToDB(TeamInfo teamInfo,List<String> mails) throws MatchException {
-        int teamId = marchDao.saveTeam(teamInfo);
+        marchDao.saveTeam(teamInfo);
+        int teamId = teamInfo.getId();
         if (teamId == 0) {
             throw new MatchException(ExceptionEnum.INTERNAL_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }

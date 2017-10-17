@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.edu.swpu.cins.data_castle.dao.MatchDao">
-    <insert id="saveTeam" parameterType="cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo" useGeneratedKeys="true" keyProperty="id">
+    <insert id="saveTeam" useGeneratedKeys="true" keyProperty="id" parameterType="cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo" >
         INSERT INTO
         team_info
         (team_name)

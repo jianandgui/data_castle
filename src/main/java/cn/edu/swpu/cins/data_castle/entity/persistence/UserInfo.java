@@ -1,7 +1,6 @@
 package cn.edu.swpu.cins.data_castle.entity.persistence;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -12,7 +11,7 @@ public class UserInfo {
     private Integer id;
     private Integer teamId;
     private String username;
-    private Long schoolNumber;
+    private long schoolNumber;
     private String pwd;
     private String mail;
     private int enable;
