@@ -18,4 +18,14 @@
         (SELECT t.team_name  FROM team_info AS t WHERE t.id = r.t_id LIMIT 1) AS teamName
         FROM ranking AS r
     </select>
+
+    <select id="selectByName" parameterType="String" resultType="cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo">
+        SELECT
+        id,
+        team_name AS teamName
+        FROM
+        team_info
+        WHERE
+        team_name=#{teamName}
+    </select>
 </mapper>

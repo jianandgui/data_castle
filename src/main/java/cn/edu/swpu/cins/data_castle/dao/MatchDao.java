@@ -19,4 +19,6 @@ public interface MatchDao {
 
     List<Ranking> selectAll();
 
+    TeamInfo selectByName(String teamName);
+
 }

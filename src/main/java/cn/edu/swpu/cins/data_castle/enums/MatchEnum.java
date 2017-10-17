@@ -6,9 +6,9 @@ import lombok.Data;
 @AllArgsConstructor
 
 public enum MatchEnum {
-    BAN_WITH_NATCHED("you have to match with person who do not belong a team"),
-    FILE_UPLOAD_SUCCESS("upload file success"),
-    BAN_WITH_NOENABLE("you hava to match with person who has active");
+    BAN_WITH_NATCHED("You can't team up with people who already have teams"),
+    FILE_UPLOAD_SUCCESS("Upload file success"),
+    BAN_WITH_NOENABLE("You can't team up with people who don't activate their accounts");
 
     private String msg;
 

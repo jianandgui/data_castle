@@ -98,6 +98,19 @@ public class MatchServiceImpl implements MatchService {
     }
 
     public void checkMail(List<String> mails,MatchTeam matchTeam) throws MatchException {
+        boolean isAllExist = true;
+        for (String mail : mails) {
+            if (userDao.getUser(mail) == null) {
+                isAllExist = false;
+            }
+        }
+        if (marchDao.selectByName(matchTeam.getTeamName()) != null) {
+            throw new MatchException(ExceptionEnum.REPEATE_NAME.getMsg(), HttpStatus.FORBIDDEN);
+        }
+
+        if (!isAllExist) {
+            throw new MatchException(ExceptionEnum.NO_REGISTER.getMsg(), HttpStatus.FORBIDDEN);
+        }
         if (mails.size() < 1 || mails.size() > 2) {
             throw new MatchException(ExceptionEnum.ERROR_PRAM.getMsg(), HttpStatus.BAD_REQUEST);
         }
