@@ -127,7 +127,7 @@ public class MatchServiceImpl implements MatchService {
 
 //        String path = checkDir(teamId);
         String path = location;
-        String fileName = teamId + "_answer";
+        String fileName = teamId + "_answer.csv";
         path += "/" + fileName;
         File file = new File(path);
         try {
