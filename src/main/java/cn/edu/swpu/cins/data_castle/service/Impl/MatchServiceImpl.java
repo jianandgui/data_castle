@@ -15,6 +15,8 @@ import cn.edu.swpu.cins.data_castle.exception.MatchException;
 import cn.edu.swpu.cins.data_castle.exception.UserException;
 import cn.edu.swpu.cins.data_castle.service.MatchService;
 import cn.edu.swpu.cins.data_castle.service.TimeService;
+import cn.edu.swpu.cins.data_castle.utils.JedisAdapter;
+import cn.edu.swpu.cins.data_castle.utils.RedisKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -36,6 +38,9 @@ public class MatchServiceImpl implements MatchService {
     @Value("${data_castle.answer.location}")
     private String location;
     private TimeService timeService;
+
+    @Autowired
+    private JedisAdapter jedisAdapter;
 
     @Autowired
     public MatchServiceImpl(UserDao userDao, MatchDao marchDao, TimeService timeService) {
@@ -124,8 +129,7 @@ public class MatchServiceImpl implements MatchService {
     public void saveFile(MultipartFile multipartFile, String mail) throws FileException, UserException {
 
         int teamId = userDao.getUser(mail).getTeamId();
-
-//        String path = checkDir(teamId);
+        checkUploadCount(teamId);
         String path = location;
         String fileName = teamId + "_answer.csv";
         path += "/" + fileName;
@@ -134,6 +138,20 @@ public class MatchServiceImpl implements MatchService {
             multipartFile.transferTo(file);
         } catch (IOException e) {
             throw  new FileException(ExceptionEnum.FILE_UPLOAD_FAILED.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public void checkUploadCount(int teamId) throws FileException {
+        String key = RedisKey.getUploadCount(teamId);
+        if (!jedisAdapter.exists(key)) {
+            jedisAdapter.setex(key, 86400, String.valueOf(1));
+        }else {
+            int uploadCount = Integer.parseInt(jedisAdapter.get(key));
+            if (uploadCount > 1) {
+                throw new FileException(ExceptionEnum.UPLOAD_FILE_LIMIT.getMsg(), HttpStatus.FORBIDDEN);
+            }
+            uploadCount++;
+            jedisAdapter.setKey(key, String.valueOf(uploadCount));
         }
     }
 

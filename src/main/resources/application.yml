@@ -6,7 +6,7 @@ spring:
   ## localhost:
 #    password: 1111
 #    username: root
-  ## serer:
+#  ## serer:
     password: cins
     username: dataCastle
     driver-class-name: com.mysql.jdbc.Driver
@@ -46,6 +46,7 @@ data_castle:
            enable: dataCastle/user/enable
    answer:
      location: /opt/data-castle/match-answer
+#     location: /home/yang/file
 
 logging:
   file: data-castle.log

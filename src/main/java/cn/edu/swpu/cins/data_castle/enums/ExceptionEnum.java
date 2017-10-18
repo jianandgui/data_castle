@@ -21,6 +21,7 @@ public enum ExceptionEnum {
     MAIL_USERD("Your mailbox has been used"),
     FILE_UPLOAD_FAILED("Upload file failed"),
     REPEATE_NAME("The teamName has been used"),
+    UPLOAD_FILE_LIMIT("Your submit is enough"),
     ERROR_PWD("Password wrong");
 
     private String msg;

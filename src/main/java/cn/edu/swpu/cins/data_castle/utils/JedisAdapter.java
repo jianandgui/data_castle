@@ -34,6 +34,22 @@ public class JedisAdapter implements InitializingBean {
         }
         return null;
     }
+    public String setKey(String key,String value) {
+        Jedis jedis = null;
+        try {
+            jedis = pool.getResource();
+            return jedis.set(key,value);
+        } catch (Exception e) {
+            logger.error("发生异常" + e.getMessage());
+        } finally {
+            if (jedis != null) {
+                jedis.close();
+            }
+        }
+        return null;
+    }
+
+
 
     //添加键值对
     public long sadd(String key, String value) {
@@ -112,6 +128,21 @@ public class JedisAdapter implements InitializingBean {
             }
         }
         return 0;
+    }
+
+    public Long incr(String key) {
+        Jedis jedis = null;
+        try {
+            jedis = pool.getResource();
+            return jedis.incr(key);
+        }catch (Exception e) {
+            logger.error("发生异常" + e.getMessage());
+        } finally {
+            if (jedis != null) {
+                jedis.close();
+            }
+        }
+        return null;
     }
 
 
