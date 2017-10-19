@@ -7268,3 +7268,6 @@ org.apache.tomcat.util.http.fileupload.FileUploadBase$FileSizeLimitExceededExcep
 2017-10-18 22:29:42.370  INFO 13724 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
 
 2017-10-18 22:29:42.374  INFO 13724 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@26a34630,{}>
+2017-10-18 22:33:59.887  INFO 13724 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6572421: startup date [Wed Oct 18 22:25:39 CST 2017]; root of context hierarchy
+2017-10-18 22:33:59.889  INFO 13724 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-18 22:33:59.890  INFO 13724 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown

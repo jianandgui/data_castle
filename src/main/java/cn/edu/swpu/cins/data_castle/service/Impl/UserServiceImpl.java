@@ -154,8 +154,9 @@ public class UserServiceImpl implements UserService{
     public boolean checkMatched(UserInfo user) {
         if (user.getTeamId() != 0) {
             return true;
+        }else {
+            return false;
         }
-        return false;
     }
 
     public void checkVerifyCode(String key,String verifyCode) throws UserException {
