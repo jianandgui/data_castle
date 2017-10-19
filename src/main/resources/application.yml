@@ -48,7 +48,7 @@ data_castle:
      location: /opt/data-castle/match-answer
 #     location: /home/yang/file
      limitTime: 86400
-     captchaExpires: 3 * 60
+     captchaExpires: 180
 
 logging:
   file: data-castle.log
