@@ -22,6 +22,7 @@ public enum ExceptionEnum {
     FILE_UPLOAD_FAILED("Upload file failed"),
     REPEATE_NAME("The teamName has been used"),
     UPLOAD_FILE_LIMIT("Your submit is enough"),
+    NO_MATCH("You can not upload before match with other"),
     ERROR_PWD("Password wrong");
 
     private String msg;

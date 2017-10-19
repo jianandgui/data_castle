@@ -19,6 +19,6 @@ public class RedisKey {
         return DADACASTLE_EVENTQUEUE;
     }
     public static String getUploadCount(int teamId) {
-        return UPLOAD_COUNT + SPLIT + UPLOAD_COUNT;
+        return UPLOAD_COUNT + SPLIT + teamId;
     }
 }

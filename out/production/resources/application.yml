@@ -47,6 +47,7 @@ data_castle:
    answer:
 #     location: /opt/data-castle/match-answer
      location: /home/yang/file
+     limitTime: 20
 
 logging:
   file: data-castle.log

@@ -38,6 +38,8 @@ public class MatchServiceImpl implements MatchService {
     @Value("${data_castle.answer.location}")
     private String location;
     private TimeService timeService;
+    @Value("${data_castle.answer.limitTime}")
+    private int limitTime;
 
     @Autowired
     private JedisAdapter jedisAdapter;
@@ -129,6 +131,7 @@ public class MatchServiceImpl implements MatchService {
     public void saveFile(MultipartFile multipartFile, String mail) throws FileException, UserException {
 
         int teamId = userDao.getUser(mail).getTeamId();
+        checkTeamId(teamId);
         checkUploadCount(teamId);
         String path = location;
         String fileName = teamId + "_answer.csv";
@@ -141,17 +144,24 @@ public class MatchServiceImpl implements MatchService {
         }
     }
 
+    public void checkTeamId(int teamId) throws FileException {
+        if (teamId == 0) {
+            throw new FileException(ExceptionEnum.NO_MATCH.getMsg(), HttpStatus.FORBIDDEN);
+        }
+    }
+
     public void checkUploadCount(int teamId) throws FileException {
         String key = RedisKey.getUploadCount(teamId);
         if (!jedisAdapter.exists(key)) {
-            jedisAdapter.setex(key, 86400, String.valueOf(1));
+            jedisAdapter.setex(key, limitTime, String.valueOf(1));
         }else {
+            int remainTime = (int) jedisAdapter.getTime(key);
             int uploadCount = Integer.parseInt(jedisAdapter.get(key));
             if (uploadCount > 1) {
                 throw new FileException(ExceptionEnum.UPLOAD_FILE_LIMIT.getMsg(), HttpStatus.FORBIDDEN);
             }
             uploadCount++;
-            jedisAdapter.setKey(key, String.valueOf(uploadCount));
+            jedisAdapter.setex(key,remainTime, String.valueOf(uploadCount));
         }
     }
 

@@ -19,7 +19,6 @@ public class UserDaoTest {
     public void getUser() throws Exception {
         UserInfo user = userDao.getUser("879604213@qq.com");
         System.out.println(user.getTeamId());
-
     }
 
     @Resource

@@ -6,6 +6,7 @@ import cn.apiclub.captcha.gimpy.FishEyeGimpyRenderer;
 import cn.edu.swpu.cins.data_castle.enums.ExceptionEnum;
 import cn.edu.swpu.cins.data_castle.exception.MatchException;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,8 @@ import java.util.UUID;
 public class GetCode {
     private JedisAdapter jedisAdapter;
 
-    private static int captchaExpires = 5 * 60; //超时时间3min
+    @Value("${data_castle.answer.captchaExpires}")
+    private int captchaExpires ; //超时时间3min
     private static int captchaW = 200;
     private static int captchaH = 60;
 
