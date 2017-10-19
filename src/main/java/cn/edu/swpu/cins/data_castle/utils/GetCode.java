@@ -20,7 +20,6 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Service
-@AllArgsConstructor
 public class GetCode {
     private JedisAdapter jedisAdapter;
 
