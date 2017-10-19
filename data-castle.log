@@ -11197,3 +11197,6 @@ java.lang.NullPointerException: null
 2017-10-19 15:18:53.756  INFO 11512 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
 2017-10-19 15:18:53.826  INFO 11512 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8796 (http)
 2017-10-19 15:18:53.830  INFO 11512 --- [main] c.e.s.c.d.DataCastleApplication          : Started DataCastleApplication in 4.846 seconds (JVM running for 5.315)
+2017-10-19 21:35:43.582  INFO 11512 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Thu Oct 19 15:18:49 CST 2017]; root of context hierarchy
+2017-10-19 21:35:43.585  INFO 11512 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-19 21:35:43.589  INFO 11512 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
