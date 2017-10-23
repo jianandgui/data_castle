@@ -25,7 +25,7 @@ public class TimeServiceImpl implements TimeService{
     @Override
     public long getMatchExpireTime() {
         Calendar expireTime = Calendar.getInstance(Locale.CHINA);
-        expireTime.set(2017, Calendar.DECEMBER, 1, 21, 0, 0);
+        expireTime.set(2017, Calendar.DECEMBER ,9, 24, 0, 0);
         return expireTime.getTimeInMillis();
     }
 }

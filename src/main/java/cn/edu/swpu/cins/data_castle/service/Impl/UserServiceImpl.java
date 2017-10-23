@@ -136,9 +136,9 @@ public class UserServiceImpl implements UserService{
     @Override
     @Transactional(rollbackFor = {RuntimeException.class,UserException.class,SQLException.class})
     public UserSignResult userLogin(SignInUser signInUser,String captchaCode) throws UserException {
-        checkVerifyCode(captchaCode, signInUser.getVerifyCode());
         UserInfo user = userDao.getUser(signInUser.getMail());
         checkUser(user, signInUser);
+        checkVerifyCode(captchaCode, signInUser.getVerifyCode());
         //将用户加入缓存
         boolean matched = checkMatched(user);
         String token = UUID.randomUUID().toString();
