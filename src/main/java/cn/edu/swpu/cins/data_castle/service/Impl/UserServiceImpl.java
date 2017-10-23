@@ -136,8 +136,7 @@ public class UserServiceImpl implements UserService{
     @Override
     @Transactional(rollbackFor = {RuntimeException.class,UserException.class,SQLException.class})
     public UserSignResult userLogin(SignInUser signInUser,String captchaCode) throws UserException {
-        UserInfo user = userDao.getUser(signInUser.getMail());
-        checkUser(user, signInUser);
+        UserInfo user=checkUser(signInUser.getMail(), signInUser);
         checkVerifyCode(captchaCode, signInUser.getVerifyCode());
         //将用户加入缓存
         boolean matched = checkMatched(user);
@@ -145,7 +144,7 @@ public class UserServiceImpl implements UserService{
         String encoderToken = passwordEncoderService.encode(token);
         String mail = user.getMail();
         String key = createKey.getKey(LOGIN,mail);
-        jedisAdapter.setex(key, 8640000, encoderToken);
+        jedisAdapter.setex(key, 86400, encoderToken);
         String username = user.getUsername();
         return new UserSignResult(token, mail, username,matched);
     }
@@ -169,15 +168,22 @@ public class UserServiceImpl implements UserService{
         }
     }
 
-    public void checkUser(UserInfo user, SignInUser signInUser) throws UserException {
-        if (user.getEnable() != 1) {
-            throw new UserException(ExceptionEnum.NO_ENABLE.getMsg(), HttpStatus.FORBIDDEN);
-        }
-        if (signInUser == null || user == null) {
+    public UserInfo checkUser(String email, SignInUser signInUser) throws UserException {
+        UserInfo user;
+        try {
+            user = userDao.getUser(email);
+            if (user.getEnable() != 1) {
+                throw new UserException(ExceptionEnum.NO_ENABLE.getMsg(), HttpStatus.FORBIDDEN);
+            }
+            if (signInUser == null || user == null) {
+                throw new UserException(ExceptionEnum.NO_USER.getMsg(), HttpStatus.FORBIDDEN);
+            }
+            if (!passwordEncoderService.match(signInUser.getPwd(), user.getPwd())) {
+                throw new UserException(ExceptionEnum.ERROR_PWD.getMsg(), HttpStatus.FORBIDDEN);
+            }
+            return user;
+        } catch (NullPointerException e) {
             throw new UserException(ExceptionEnum.NO_USER.getMsg(), HttpStatus.FORBIDDEN);
-        }
-        if (!passwordEncoderService.match(signInUser.getPwd(), user.getPwd())) {
-            throw new UserException(ExceptionEnum.ERROR_PWD.getMsg(), HttpStatus.FORBIDDEN);
         }
     }
 }
