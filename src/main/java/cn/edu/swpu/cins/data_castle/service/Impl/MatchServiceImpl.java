@@ -132,7 +132,7 @@ public class MatchServiceImpl implements MatchService {
 
         int teamId = userDao.getUser(mail).getTeamId();
         checkTeamId(teamId);
-        checkUploadCount(teamId);
+        //checkUploadCount(teamId);
         String path = location;
         String fileName = teamId + "_answer.csv";
         path += "/" + fileName;
