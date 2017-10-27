@@ -14579,3 +14579,6 @@ java.sql.SQLException: Access denied for user 'dataCastle'@'localhost' (using pa
 2017-10-27 13:43:11.301  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
 
 2017-10-27 13:43:11.303  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@abde07e,{}>
+2017-10-27 13:47:22.783  INFO 16460 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Fri Oct 27 13:43:03 CST 2017]; root of context hierarchy
+2017-10-27 13:47:22.786  INFO 16460 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-27 13:47:22.788  INFO 16460 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
