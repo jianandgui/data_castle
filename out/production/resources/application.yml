@@ -46,7 +46,6 @@ data_castle:
            enable: dataCastle/user/enable
    answer:
      location: /opt/data-castle/match-answer
-#     location: /home/yang/file
      limitTime: 86400
      captchaExpires: 180
 
