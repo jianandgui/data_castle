@@ -146,7 +146,8 @@ public class UserServiceImpl implements UserService{
         String key = createKey.getKey(LOGIN,mail);
         jedisAdapter.setex(key, 86400, encoderToken);
         String username = user.getUsername();
-        return new UserSignResult(token, mail, username,matched);
+        int teamId = user.getTeamId();
+        return new UserSignResult(token, mail, username,matched,teamId);
     }
 
 

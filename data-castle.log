@@ -14002,3 +14002,580 @@ AAAAAElFTkSuQmCC,{}>
 2017-10-27 13:36:35.250  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
 
 2017-10-27 13:36:35.256  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>
+2017-10-27 13:39:13.352  INFO 15762 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Fri Oct 27 13:24:50 CST 2017]; root of context hierarchy
+2017-10-27 13:39:13.356  INFO 15762 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-27 13:39:13.357  INFO 15762 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-10-27 13:41:47.864  INFO 16321 --- [main] c.e.s.c.d.DataCastleApplication          : Starting DataCastleApplication on yang with PID 16321 (/home/yang/idea_work_space/data_castle/out/production/classes started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-27 13:41:47.868  INFO 16321 --- [main] c.e.s.c.d.DataCastleApplication          : No active profile set, falling back to default profiles: default
+2017-10-27 13:41:47.939  INFO 16321 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Fri Oct 27 13:41:47 CST 2017]; root of context hierarchy
+2017-10-27 13:41:49.208  INFO 16321 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-27 13:41:50.211  INFO 16321 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8796 (http)
+2017-10-27 13:41:50.224  INFO 16321 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-27 13:41:50.226  INFO 16321 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-27 13:41:50.298  INFO 16321 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-27 13:41:50.298  INFO 16321 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2367 ms
+2017-10-27 13:41:50.549  INFO 16321 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-27 13:41:50.549  INFO 16321 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-27 13:41:50.550  INFO 16321 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-10-27 13:41:50.550  INFO 16321 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-27 13:41:50.551  INFO 16321 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-27 13:41:50.551  INFO 16321 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-27 13:41:50.693  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:41:50.693  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MailServiceImpl.sendMail
+2017-10-27 13:41:50.693  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : arg : yangquan95@163.com
+2017-10-27 13:41:50.693  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 尊敬的老付，欢迎注册创数据团队data_castle活动
+2017-10-27 13:41:50.693  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 请访问下面的链接以激活您的邮箱（<b>30分钟有效</b>）<br/><a href='http://182.150.37.58:9595/cins/passCheck/index.html?mail=eWFuZ3F1YW45NUAxNjMuY29t&token=NzA4NjZmMGYtNjYxMy00ZDIxLWI4YWEtMTZmNjA5YzQ3MGZh' target='_blank'>http://182.150.37.58:9595/cins/passCheck/index.html?mail=eWFuZ3F1YW45NUAxNjMuY29t&token=NzA4NjZmMGYtNjYxMy00ZDIxLWI4YWEtMTZmNjA5YzQ3MGZh</a>
+2017-10-27 13:41:50.693  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:41:51.522  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-27 13:41:51.523  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-27 13:41:51.524  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-27 13:41:51.524  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-27 13:41:51.525  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-27 13:41:51.525  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam,java.lang.String) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-27 13:41:51.526  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-27 13:41:51.528  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-27 13:41:51.528  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-27 13:41:51.620  INFO 16321 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Fri Oct 27 13:41:47 CST 2017]; root of context hierarchy
+2017-10-27 13:41:51.912  INFO 16321 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c369270, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e5beb8a, org.springframework.security.web.header.HeaderWriterFilter@42d6c12d, org.springframework.security.web.authentication.logout.LogoutFilter@2bc7db89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17b016ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d229b1c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9f86dc3, org.springframework.security.web.session.SessionManagementFilter@71b6172c, org.springframework.security.web.access.ExceptionTranslationFilter@7b5b5bfe, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e7f19b4]
+2017-10-27 13:41:52.189  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-10-27 13:41:52.191  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-27 13:41:52.191  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.192  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-10-27 13:41:52.193  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-10-27 13:41:52.193  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.193  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-27 13:41:52.194  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.194  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-27 13:41:52.194  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.195  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.195  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.196  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.196  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.197  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-27 13:41:52.197  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2017-10-27 13:41:52.198  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.198  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:41:52.199  INFO 16321 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-10-27 13:41:52.209  INFO 16321 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@4d09cade, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f87607c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bbb44da, org.springframework.security.web.header.HeaderWriterFilter@32faa16c, org.springframework.web.filter.CorsFilter@4b862408, org.springframework.security.web.authentication.logout.LogoutFilter@5a13fcf3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@34208baa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f80cb79, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4816ee24, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ddee60f, org.springframework.security.web.session.SessionManagementFilter@343fddd9, org.springframework.security.web.access.ExceptionTranslationFilter@5503de1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11b32a14]
+2017-10-27 13:41:52.684  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:41:52.684  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : service return : null
+2017-10-27 13:41:52.684  INFO 16321 --- [Thread-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:41:52.991  INFO 16321 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-27 13:41:53.005  INFO 16321 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-27 13:41:53.111  INFO 16321 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8796 (http)
+2017-10-27 13:41:53.117  INFO 16321 --- [main] c.e.s.c.d.DataCastleApplication          : Started DataCastleApplication in 5.657 seconds (JVM running for 6.256)
+2017-10-27 13:42:18.152  INFO 16321 --- [http-nio-8796-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-27 13:42:18.153  INFO 16321 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-27 13:42:18.167  INFO 16321 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2017-10-27 13:42:18.216  INFO 16321 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:42:18.216  INFO 16321 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper@4ccd43fc
+2017-10-27 13:42:18.216  INFO 16321 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:42:18.216  INFO 16321 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin
+2017-10-27 13:42:18.396  INFO 16321 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,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,{}>
+2017-10-27 13:42:42.064  INFO 16321 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:42:42.064  INFO 16321 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@31bf5646
+2017-10-27 13:42:42.064  INFO 16321 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : c9ffea1e-e1b8-4b1e-a5be-a46ca8a38533
+2017-10-27 13:42:42.064  INFO 16321 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:42:42.064  INFO 16321 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-27 13:42:42.195 ERROR 16321 --- [http-nio-8796-exec-2] o.a.tomcat.jdbc.pool.ConnectionPool      : Unable to create initial connections of pool.
+
+java.sql.SQLException: Access denied for user 'dataCastle'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2191) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_112]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_112]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735) [tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667) [tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482) [tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154) [tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118) [tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107) [tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131) [tomcat-jdbc-8.5.20.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:246) [spring-jdbc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) [spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:447) [spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:277) [spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96) [spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl$$EnhancerBySpringCGLIB$$b9c64df9.userLogin(<generated>) [classes/:na]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(AuthController.java:68) [classes/:na]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController$$FastClassBySpringCGLIB$$923d74fc.invoke(<generated>) [classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) [spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673) [spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController$$EnhancerBySpringCGLIB$$ca93c7c8.userLogin(<generated>) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) [spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) [spring-boot-actuator-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177) [spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) [spring-boot-actuator-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_112]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_112]
+
+2017-10-27 13:42:42.198  INFO 16321 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller throw Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: Access denied for user 'dataCastle'@'localhost' (using password: YES)
+2017-10-27 13:42:42.206 ERROR 16321 --- [http-nio-8796-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is java.sql.SQLException: Access denied for user 'dataCastle'@'localhost' (using password: YES)] with root cause
+
+java.sql.SQLException: Access denied for user 'dataCastle'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:964) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3973) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3909) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:873) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1710) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2191) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2222) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2017) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:779) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_112]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_112]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330) ~[mysql-connector-java-5.1.44.jar:5.1.44]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connectUsingDriver(PooledConnection.java:310) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.PooledConnection.connect(PooledConnection.java:203) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.createConnection(ConnectionPool.java:735) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.borrowConnection(ConnectionPool.java:667) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.init(ConnectionPool.java:482) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.<init>(ConnectionPool.java:154) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.pCreatePool(DataSourceProxy.java:118) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.createPool(DataSourceProxy.java:107) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.apache.tomcat.jdbc.pool.DataSourceProxy.getConnection(DataSourceProxy.java:131) ~[tomcat-jdbc-8.5.20.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:246) ~[spring-jdbc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:447) ~[spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:277) ~[spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96) ~[spring-tx-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl$$EnhancerBySpringCGLIB$$b9c64df9.userLogin(<generated>) ~[classes/:na]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(AuthController.java:68) ~[classes/:na]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController$$FastClassBySpringCGLIB$$923d74fc.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:52) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:52) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:62) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:673) ~[spring-aop-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at cn.edu.swpu.cins.data_castle.controller.AuthController$$EnhancerBySpringCGLIB$$ca93c7c8.userLogin(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_112]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_112]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_112]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_112]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) ~[spring-boot-actuator-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:64) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177) ~[spring-security-web-4.2.3.RELEASE.jar:4.2.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:262) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) ~[spring-boot-actuator-1.5.7.RELEASE.jar:1.5.7.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.11.RELEASE.jar:4.3.11.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) ~[tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1457) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_112]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_112]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.20.jar:8.5.20]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_112]
+
+2017-10-27 13:43:01.625  INFO 16321 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Fri Oct 27 13:41:47 CST 2017]; root of context hierarchy
+2017-10-27 13:43:01.633  INFO 16321 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-27 13:43:01.636  INFO 16321 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-10-27 13:43:03.287  INFO 16460 --- [main] c.e.s.c.d.DataCastleApplication          : Starting DataCastleApplication on yang with PID 16460 (/home/yang/idea_work_space/data_castle/out/production/classes started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-27 13:43:03.292  INFO 16460 --- [main] c.e.s.c.d.DataCastleApplication          : No active profile set, falling back to default profiles: default
+2017-10-27 13:43:03.348  INFO 16460 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Fri Oct 27 13:43:03 CST 2017]; root of context hierarchy
+2017-10-27 13:43:04.587  INFO 16460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-27 13:43:05.452  INFO 16460 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8796 (http)
+2017-10-27 13:43:05.463  INFO 16460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-27 13:43:05.464  INFO 16460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-27 13:43:05.520  INFO 16460 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-27 13:43:05.520  INFO 16460 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2175 ms
+2017-10-27 13:43:05.749  INFO 16460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-27 13:43:05.750  INFO 16460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-27 13:43:05.751  INFO 16460 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-10-27 13:43:05.751  INFO 16460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-27 13:43:05.751  INFO 16460 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-27 13:43:05.751  INFO 16460 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-27 13:43:06.622  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-27 13:43:06.623  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-27 13:43:06.623  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-27 13:43:06.623  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-27 13:43:06.624  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-27 13:43:06.625  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam,java.lang.String) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-27 13:43:06.625  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-27 13:43:06.628  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-27 13:43:06.628  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-27 13:43:06.727  INFO 16460 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Fri Oct 27 13:43:03 CST 2017]; root of context hierarchy
+2017-10-27 13:43:07.063  INFO 16460 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5df63359, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c184d4d, org.springframework.security.web.header.HeaderWriterFilter@4c1d59cd, org.springframework.security.web.authentication.logout.LogoutFilter@9c93d16, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@158e9f6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b1ec694, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53d2d002, org.springframework.security.web.session.SessionManagementFilter@40bb4f87, org.springframework.security.web.access.ExceptionTranslationFilter@661fe025, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f80cb79]
+2017-10-27 13:43:07.340  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-27 13:43:07.341  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.341  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-10-27 13:43:07.342  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.342  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-10-27 13:43:07.343  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.343  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-27 13:43:07.344  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-27 13:43:07.344  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.345  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.345  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-27 13:43:07.346  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.347  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-10-27 13:43:07.347  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-10-27 13:43:07.348  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.348  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.349  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2017-10-27 13:43:07.349  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.349  INFO 16460 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:43:07.359  INFO 16460 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@2ec99035, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60743cdb, org.springframework.security.web.context.SecurityContextPersistenceFilter@314a31b0, org.springframework.security.web.header.HeaderWriterFilter@104dc1a2, org.springframework.web.filter.CorsFilter@c02670f, org.springframework.security.web.authentication.logout.LogoutFilter@79d3473e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2cd388f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2753316c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59edb4f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@71179b6f, org.springframework.security.web.session.SessionManagementFilter@67d32a54, org.springframework.security.web.access.ExceptionTranslationFilter@35c4697c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62765aec]
+2017-10-27 13:43:08.107  INFO 16460 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-27 13:43:08.116  INFO 16460 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-27 13:43:08.208  INFO 16460 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8796 (http)
+2017-10-27 13:43:08.212  INFO 16460 --- [main] c.e.s.c.d.DataCastleApplication          : Started DataCastleApplication in 5.254 seconds (JVM running for 5.836)
+2017-10-27 13:43:10.740  INFO 16460 --- [http-nio-8796-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-27 13:43:10.740  INFO 16460 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-27 13:43:10.754  INFO 16460 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2017-10-27 13:43:10.849  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:43:10.849  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@31b1c1d6
+2017-10-27 13:43:10.849  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : c9ffea1e-e1b8-4b1e-a5be-a46ca8a38533
+2017-10-27 13:43:10.851  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:43:10.851  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-27 13:43:11.073  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.073  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.userLogin
+2017-10-27 13:43:11.073  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@31b1c1d6
+2017-10-27 13:43:11.073  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : c9ffea1e-e1b8-4b1e-a5be-a46ca8a38533
+2017-10-27 13:43:11.073  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.097  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.097  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:43:11.097  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-27 13:43:11.097  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$o/fcfNPJWQE1U.JvGuo8OexwqO0qQiF4.GOMEAMowEPdxwgr7OjcK
+2017-10-27 13:43:11.097  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.197  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.197  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:43:11.197  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.198  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.198  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-27 13:43:11.198  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 9226a811-19af-4164-bdc6-5c948fc7e2c7
+2017-10-27 13:43:11.198  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.299  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.299  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$ywXPGZ6S9Lr11bVVtsQxk.MpyfH7Cv5IY86UBVUrcdIEb3NqaObAi
+2017-10-27 13:43:11.299  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.300  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.300  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@abde07e
+2017-10-27 13:43:11.301  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:43:11.303  INFO 16460 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@abde07e,{}>

@@ -13,4 +13,5 @@ public class UserSignResult {
     private String mail;
     private String username;
     private boolean matched;
+    private int teamId;
 }
