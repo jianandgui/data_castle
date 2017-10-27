@@ -35,7 +35,7 @@ public class MailFormatServiceImpl implements MailFormatService{
         String baseMail = urlCoderService.encode(mail);
         String baseToken = urlCoderService.encode(token);
         //String link = "http://"+ host + ':' + port + "/" + enablePath + "?mail=" +	baseMail + "&token=" + baseToken;
-        String link = "http://"+ host + ':' + port + "/" + "/passCheck/index.html" + "?mail=" +	baseMail + "&token=" + baseToken;
+        String link = "http://"+ host + ':' + port + "/" + "passCheck/index.html" + "?mail=" +	baseMail + "&token=" + baseToken;
         String htmlLink = "<a href='" + link + "' target='_blank'>" + link + "</a>";
         return previous + htmlLink;
     }
