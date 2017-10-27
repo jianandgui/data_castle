@@ -22,9 +22,9 @@ public class MatchController {
     private MatchService matchService;
 
     @PostMapping("team")
-    public ResponseEntity<?> createTeam(@RequestBody MatchTeam matchTeam) throws MatchException {
+    public ResponseEntity<?> createTeam(@RequestBody MatchTeam matchTeam,@RequestHeader("dataCastleMail") String ownEmail) throws MatchException {
         try {
-            return new ResponseEntity<>(matchService.addTeam(matchTeam), HttpStatus.OK);
+            return new ResponseEntity<>(matchService.addTeam(matchTeam,ownEmail), HttpStatus.OK);
         } catch (DataCastleException e) {
             return new ResponseEntity<>(new ExceptionResult(e.getMessage()), e.getStatus());
         }

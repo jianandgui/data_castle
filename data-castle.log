@@ -13073,3 +13073,932 @@ OHgyqaprtFpYHDyVGe5qpEyJcrhrsPh+0AfrPw48uvq0NHRoAAAAAElFTkSuQmCC,{}>
 2017-10-23 22:02:38.707  INFO 8543 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Mon Oct 23 21:27:40 CST 2017]; root of context hierarchy
 2017-10-23 22:02:38.709  INFO 8543 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
 2017-10-23 22:02:38.711  INFO 8543 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-10-27 13:24:50.649  INFO 15762 --- [main] c.e.s.c.d.DataCastleApplication          : Starting DataCastleApplication on yang with PID 15762 (/home/yang/idea_work_space/data_castle/out/production/classes started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-27 13:24:50.660  INFO 15762 --- [main] c.e.s.c.d.DataCastleApplication          : No active profile set, falling back to default profiles: default
+2017-10-27 13:24:50.726  INFO 15762 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Fri Oct 27 13:24:50 CST 2017]; root of context hierarchy
+2017-10-27 13:24:51.946  INFO 15762 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-27 13:24:52.934  INFO 15762 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8796 (http)
+2017-10-27 13:24:52.947  INFO 15762 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-27 13:24:52.948  INFO 15762 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-27 13:24:53.002  INFO 15762 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-27 13:24:53.002  INFO 15762 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2282 ms
+2017-10-27 13:24:53.234  INFO 15762 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-27 13:24:53.234  INFO 15762 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-27 13:24:53.235  INFO 15762 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-10-27 13:24:53.235  INFO 15762 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-27 13:24:53.235  INFO 15762 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-27 13:24:53.235  INFO 15762 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-27 13:24:53.355 ERROR 15762 --- [Thread-2] c.e.s.c.data_castle.utils.JedisAdapter   : 发生异常Could not get a resource from the pool
+2017-10-27 13:24:54.349  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-27 13:24:54.350  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-27 13:24:54.351  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-27 13:24:54.351  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-27 13:24:54.352  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-27 13:24:54.353  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam,java.lang.String) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-27 13:24:54.353  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-27 13:24:54.356  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-27 13:24:54.357  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-27 13:24:54.449  INFO 15762 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Fri Oct 27 13:24:50 CST 2017]; root of context hierarchy
+2017-10-27 13:24:54.917  INFO 15762 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@343fddd9, org.springframework.security.web.context.SecurityContextPersistenceFilter@629984eb, org.springframework.security.web.header.HeaderWriterFilter@56cc9f29, org.springframework.security.web.authentication.logout.LogoutFilter@3d299393, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c1d59cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55b5cd2b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2bbb44da, org.springframework.security.web.session.SessionManagementFilter@661fe025, org.springframework.security.web.access.ExceptionTranslationFilter@1f95881a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e62ead7]
+2017-10-27 13:24:55.241  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-27 13:24:55.242  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.243  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.244  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.245  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-27 13:24:55.246  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.247  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2017-10-27 13:24:55.248  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.250  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.251  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-10-27 13:24:55.252  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-27 13:24:55.253  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.255  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-10-27 13:24:55.256  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-10-27 13:24:55.256  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.257  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.258  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-27 13:24:55.258  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-27 13:24:55.259  INFO 15762 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-10-27 13:24:55.277  INFO 15762 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@1150d471, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@709f0202, org.springframework.security.web.context.SecurityContextPersistenceFilter@71370fec, org.springframework.security.web.header.HeaderWriterFilter@5820070c, org.springframework.web.filter.CorsFilter@654e6a90, org.springframework.security.web.authentication.logout.LogoutFilter@1cf336fd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2792b416, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6707a4bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3fc7c734, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14168e1, org.springframework.security.web.session.SessionManagementFilter@34208baa, org.springframework.security.web.access.ExceptionTranslationFilter@5b39a3e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35c4697c]
+2017-10-27 13:24:56.189  INFO 15762 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-27 13:24:56.200  INFO 15762 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-27 13:24:56.297  INFO 15762 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8796 (http)
+2017-10-27 13:24:56.303  INFO 15762 --- [main] c.e.s.c.d.DataCastleApplication          : Started DataCastleApplication in 6.377 seconds (JVM running for 7.654)
+2017-10-27 13:26:21.048  INFO 15762 --- [http-nio-8796-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-27 13:26:21.048  INFO 15762 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-27 13:26:21.065  INFO 15762 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2017-10-27 13:26:21.104  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:26:21.104  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper@4a316511
+2017-10-27 13:26:21.106  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:26:21.106  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin
+2017-10-27 13:26:21.284 ERROR 15762 --- [http-nio-8796-exec-1] c.e.s.c.data_castle.utils.JedisAdapter   : 发生异常Could not get a resource from the pool
+2017-10-27 13:26:21.326  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,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
+rkJggg==,{}>
+2017-10-27 13:27:06.462  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:27:06.462  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@67a9d732
+2017-10-27 13:27:06.462  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : 20d9f657-9102-467f-84e4-774c1616bb69
+2017-10-27 13:27:06.463  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:27:06.463  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-27 13:27:06.643  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:27:06.643  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.userLogin
+2017-10-27 13:27:06.643  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@67a9d732
+2017-10-27 13:27:06.643  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 20d9f657-9102-467f-84e4-774c1616bb69
+2017-10-27 13:27:06.643  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:27:06.667  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@50e360b1,{}>
+2017-10-27 13:27:39.698  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:27:39.698  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : arg : org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper@74ccffe7
+2017-10-27 13:27:39.698  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:27:39.699  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin
+2017-10-27 13:27:39.729  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,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,{}>
+2017-10-27 13:28:09.993  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:28:09.993  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@73799d9d
+2017-10-27 13:28:09.993  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : arg : 4255f9d0-d688-4d56-b1cb-2b85e04e2fd0
+2017-10-27 13:28:09.993  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:28:09.993  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-27 13:28:09.995  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:09.995  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.userLogin
+2017-10-27 13:28:09.995  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@73799d9d
+2017-10-27 13:28:09.995  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : 4255f9d0-d688-4d56-b1cb-2b85e04e2fd0
+2017-10-27 13:28:09.995  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:09.997  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@d753f4b,{}>
+2017-10-27 13:28:16.078  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:28:16.078  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@5e536a0d
+2017-10-27 13:28:16.079  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : arg : 4255f9d0-d688-4d56-b1cb-2b85e04e2fd0
+2017-10-27 13:28:16.079  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:28:16.079  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-27 13:28:16.080  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.080  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.userLogin
+2017-10-27 13:28:16.080  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@5e536a0d
+2017-10-27 13:28:16.080  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : 4255f9d0-d688-4d56-b1cb-2b85e04e2fd0
+2017-10-27 13:28:16.080  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.085  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.085  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:28:16.085  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-27 13:28:16.085  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$o/fcfNPJWQE1U.JvGuo8OexwqO0qQiF4.GOMEAMowEPdxwgr7OjcK
+2017-10-27 13:28:16.085  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.186  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.186  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:28:16.186  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.187  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.188  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-27 13:28:16.188  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:28:16.188  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.281  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.281  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:28:16.281  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.282  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.282  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : service return : cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@25ba11b8
+2017-10-27 13:28:16.283  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:28:16.286  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@25ba11b8,{}>
+2017-10-27 13:29:28.312  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:28.312  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:29:28.312  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:29:28.312  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:29:28.312  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:28.426  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:28.427  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:29:28.427  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:28.432  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:29:28.433  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@4e5a0adb
+2017-10-27 13:29:28.433  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:29:28.433  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:29:28.433  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:29:28.437  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:28.437  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:29:28.437  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@4e5a0adb
+2017-10-27 13:29:28.437  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:29:28.438  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:28.445  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@5b7803e7,{}>
+2017-10-27 13:29:47.103  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:47.103  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:29:47.103  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:29:47.103  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:29:47.103  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:47.201  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:47.201  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:29:47.201  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:47.202  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:29:47.202  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@5e797bdd
+2017-10-27 13:29:47.202  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:29:47.202  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:29:47.202  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:29:47.203  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:47.203  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:29:47.203  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@5e797bdd
+2017-10-27 13:29:47.203  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:29:47.203  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:29:47.207  INFO 15762 --- [http-nio-8796-exec-8] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@7c800983,{}>
+2017-10-27 13:30:06.983  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:30:06.983  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:30:06.983  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:30:06.983  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:30:06.983  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:30:07.090  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:30:07.090  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:30:07.091  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:30:07.092  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:30:07.092  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@7a4ae34
+2017-10-27 13:30:07.092  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:30:07.092  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:30:07.092  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:30:07.093  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:30:07.093  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:30:07.093  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@7a4ae34
+2017-10-27 13:30:07.093  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:30:07.093  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:30:07.109  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:30:07.109  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : service return : 1
+2017-10-27 13:30:07.109  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:30:07.114  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>
+2017-10-27 13:31:04.675  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:31:04.676  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : arg : org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper@4cc653ff
+2017-10-27 13:31:04.676  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:31:04.676  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin
+2017-10-27 13:31:04.694  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,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
+AAAAAElFTkSuQmCC,{}>
+2017-10-27 13:31:52.239  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:31:52.239  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@5b10f3e8
+2017-10-27 13:31:52.239  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : 48a7fa56-7cb5-4d83-b299-26c21d603283
+2017-10-27 13:31:52.239  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:31:52.239  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister
+2017-10-27 13:31:52.240  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.240  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.insertUser
+2017-10-27 13:31:52.240  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignUp@5b10f3e8
+2017-10-27 13:31:52.240  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 48a7fa56-7cb5-4d83-b299-26c21d603283
+2017-10-27 13:31:52.240  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.245  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.249  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-27 13:31:52.249  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-27 13:31:52.250  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.349  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.349  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$o7buTrfZ6gHPb1RKSi.2h.ney/gbiQXU1m2izSV8Hx.3c2.wSVDM2
+2017-10-27 13:31:52.349  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.350  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.350  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MailFormatServiceImpl.getSignUpSubject
+2017-10-27 13:31:52.350  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 老付
+2017-10-27 13:31:52.350  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.352  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.352  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : 尊敬的老付，欢迎注册创数据团队data_castle活动
+2017-10-27 13:31:52.352  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MailFormatServiceImpl.getSignUpContent
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : yangquan95@163.com
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 70866f0f-6613-4d21-b8aa-16f609c470fa
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.URLCoderServiceImpl.encode
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : yangquan95@163.com
+2017-10-27 13:31:52.353  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : eWFuZ3F1YW45NUAxNjMuY29t
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.URLCoderServiceImpl.encode
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 70866f0f-6613-4d21-b8aa-16f609c470fa
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : NzA4NjZmMGYtNjYxMy00ZDIxLWI4YWEtMTZmNjA5YzQ3MGZh
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : 请访问下面的链接以激活您的邮箱（<b>30分钟有效</b>）<br/><a href='http://182.150.37.58:9595/cins/passCheck/index.html?mail=eWFuZ3F1YW45NUAxNjMuY29t&token=NzA4NjZmMGYtNjYxMy00ZDIxLWI4YWEtMTZmNjA5YzQ3MGZh' target='_blank'>http://182.150.37.58:9595/cins/passCheck/index.html?mail=eWFuZ3F1YW45NUAxNjMuY29t&token=NzA4NjZmMGYtNjYxMy00ZDIxLWI4YWEtMTZmNjA5YzQ3MGZh</a>
+2017-10-27 13:31:52.355  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.397  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.397  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : 1
+2017-10-27 13:31:52.397  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:31:52.403  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>
+2017-10-27 13:32:33.561  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:33.561  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:32:33.561  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:32:33.561  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:32:33.561  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:33.657  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:33.657  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:32:33.658  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:33.659  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:32:33.659  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@7fbbb8f0
+2017-10-27 13:32:33.659  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:32:33.659  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:32:33.659  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:32:33.660  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:33.660  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:32:33.660  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@7fbbb8f0
+2017-10-27 13:32:33.660  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:32:33.660  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:33.665  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@3e122c00,{}>
+2017-10-27 13:32:37.487  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:37.487  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:32:37.487  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:32:37.487  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:32:37.487  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:37.583  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:37.583  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:32:37.584  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:37.584  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:32:37.584  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@10f7753d
+2017-10-27 13:32:37.584  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:32:37.584  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:32:37.585  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:32:37.585  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:37.585  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:32:37.585  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@10f7753d
+2017-10-27 13:32:37.585  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:32:37.585  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:37.589  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@69290f2e,{}>
+2017-10-27 13:32:48.641  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:48.641  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:32:48.641  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:32:48.641  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:32:48.641  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:48.749  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:48.750  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:32:48.750  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:48.751  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:32:48.751  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@5cac98f6
+2017-10-27 13:32:48.751  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:32:48.751  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:32:48.751  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:32:48.752  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:48.752  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:32:48.752  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@5cac98f6
+2017-10-27 13:32:48.752  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:32:48.752  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:48.756  INFO 15762 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@6caf4a87,{}>
+2017-10-27 13:32:54.559  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:54.560  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:32:54.560  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:32:54.560  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:32:54.560  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:54.662  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:54.662  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:32:54.662  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:54.663  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:32:54.663  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@73a6c7be
+2017-10-27 13:32:54.663  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:32:54.663  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:32:54.663  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:32:54.664  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:54.664  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:32:54.664  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@73a6c7be
+2017-10-27 13:32:54.664  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:32:54.664  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:32:54.667  INFO 15762 --- [http-nio-8796-exec-5] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@2f650092,{}>
+2017-10-27 13:33:06.126  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:06.126  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:33:06.126  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:33:06.126  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:33:06.126  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:06.232  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:06.232  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:33:06.232  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@229e2b73
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@229e2b73
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:33:06.233  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:06.236  INFO 15762 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@463f801b,{}>
+2017-10-27 13:33:18.446  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:18.446  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:33:18.446  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:33:18.446  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:33:18.446  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:18.551  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:18.551  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:33:18.551  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:18.552  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:33:18.552  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@53b53319
+2017-10-27 13:33:18.552  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:33:18.552  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:33:18.552  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:33:18.553  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:18.553  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:33:18.553  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@53b53319
+2017-10-27 13:33:18.553  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:33:18.553  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:18.557  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:18.557  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : service return : 1
+2017-10-27 13:33:18.557  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:33:18.567  INFO 15762 --- [http-nio-8796-exec-7] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>
+2017-10-27 13:34:29.686  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:34:29.686  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:34:29.686  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:34:29.686  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$mRk1tb29W/AsmrvcYwZ0cecygeHyMHwURUTT..uo86oCzTGbB4Rpy
+2017-10-27 13:34:29.686  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:34:29.781  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:34:29.781  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : service return : false
+2017-10-27 13:34:29.781  INFO 15762 --- [http-nio-8796-exec-9] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:25.992  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:25.992  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:35:25.992  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:35:25.992  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:35:25.992  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:26.094  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:26.094  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:35:26.094  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:26.095  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:35:26.095  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@7d9b4c1f
+2017-10-27 13:35:26.095  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:35:26.095  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:35:26.095  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:35:26.096  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:26.096  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:35:26.096  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@7d9b4c1f
+2017-10-27 13:35:26.096  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:35:26.096  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:26.103  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:26.103  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : service return : 1
+2017-10-27 13:35:26.103  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:26.107  INFO 15762 --- [http-nio-8796-exec-10] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>
+2017-10-27 13:35:47.870  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:47.870  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:35:47.870  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:35:47.870  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:35:47.870  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:47.971  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:47.971  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:35:47.971  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:47.972  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:35:47.972  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@5544d757
+2017-10-27 13:35:47.972  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:35:47.972  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:35:47.972  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:35:47.973  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:47.973  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:35:47.973  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@5544d757
+2017-10-27 13:35:47.973  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:35:47.973  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:35:47.976  INFO 15762 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <403 Forbidden,cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult@2546053b,{}>
+2017-10-27 13:36:00.566  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:00.566  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:36:00.566  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:36:00.566  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:36:00.566  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:00.664  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:00.664  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:36:00.664  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:00.664  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:36:00.665  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@149d10c1
+2017-10-27 13:36:00.665  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:36:00.665  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:36:00.665  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:36:00.665  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:00.665  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:36:00.666  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@149d10c1
+2017-10-27 13:36:00.666  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:36:00.666  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:00.670  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:00.670  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : service return : 1
+2017-10-27 13:36:00.670  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:00.674  INFO 15762 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>
+2017-10-27 13:36:35.142  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:35.143  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-27 13:36:35.143  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : 7eef38fd-a149-4eb8-bf52-1b6e0f83c020
+2017-10-27 13:36:35.143  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$c5pIsPqr1Uze/EkUhhfQo.cNT20Lb4j35V.N4oQ9.x5zXaX9ukUC6
+2017-10-27 13:36:35.143  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:35.243  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:35.243  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-27 13:36:35.243  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@64db4d61
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : arg : 879604213@qq.com
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.addTeam
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam@64db4d61
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : 879604213@qq.com
+2017-10-27 13:36:35.244  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:35.250  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:35.250  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : service return : 1
+2017-10-27 13:36:35.250  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-27 13:36:35.256  INFO 15762 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,1,{}>

@@ -10,7 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 public interface MatchService {
-    int addTeam(MatchTeam matchTeam) throws MatchException;
+    int addTeam(MatchTeam matchTeam,String ownEmail) throws MatchException;
 
     void saveFile(MultipartFile file, String mail) throws FileException, UserException;
 

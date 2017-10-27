@@ -53,9 +53,10 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     @Transactional(rollbackFor = {SQLException.class, DataCastleException.class,RuntimeException.class})
-    public int addTeam(MatchTeam matchTeam) throws MatchException {
+    public int addTeam(MatchTeam matchTeam,String ownEmail) throws MatchException {
         String teamName = matchTeam.getTeamName();
-        List<String> mails = matchTeam.getTeamerMail();
+        matchTeam.getTeamerMail().add(ownEmail);//加入自己的email
+        List<String> mails=matchTeam.getTeamerMail();
         checkCreateTeam(matchTeam);
         TeamInfo teamInfo = new TeamInfo();
         teamInfo.setTeamName(teamName);
