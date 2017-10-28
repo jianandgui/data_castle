@@ -147,14 +147,15 @@ public class UserServiceImpl implements UserService{
         jedisAdapter.setex(key, 86400, encoderToken);
         String username = user.getUsername();
         String teamId = String.valueOf(user.getTeamId());
-        checkTeamId(teamId);
+        teamId=checkTeamId(teamId);
         return new UserSignResult(token, mail, username,matched,teamId);
     }
 
-    public void checkTeamId(String teamId) {
+    public String checkTeamId(String teamId) {
         if (Integer.parseInt(teamId)==0) {
             teamId = null;
         }
+        return teamId;
     }
 
 

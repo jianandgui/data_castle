@@ -15301,3 +15301,419 @@ jI5W864HnQRrugNW9E4vzwx3y+EeS/EMd9fhbsAK1oMMrH8D5EDGIbPs3HAAAAAASUVORK5CYII=,{}>
 2017-10-28 11:38:20.888  INFO 6499 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Sat Oct 28 11:32:04 CST 2017]; root of context hierarchy
 2017-10-28 11:38:20.890  INFO 6499 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
 2017-10-28 11:38:20.892  INFO 6499 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-10-28 15:28:54.178  INFO 8364 --- [main] c.e.s.c.d.DataCastleApplication          : Starting DataCastleApplication on yang with PID 8364 (/home/yang/idea_work_space/data_castle/out/production/classes started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-28 15:28:54.182  INFO 8364 --- [main] c.e.s.c.d.DataCastleApplication          : No active profile set, falling back to default profiles: default
+2017-10-28 15:28:54.256  INFO 8364 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Sat Oct 28 15:28:54 CST 2017]; root of context hierarchy
+2017-10-28 15:28:55.625  INFO 8364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-28 15:28:56.461  INFO 8364 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8796 (http)
+2017-10-28 15:28:56.471  INFO 8364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-28 15:28:56.472  INFO 8364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-28 15:28:56.520  INFO 8364 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-28 15:28:56.521  INFO 8364 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2269 ms
+2017-10-28 15:28:56.712  INFO 8364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-28 15:28:56.713  INFO 8364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-28 15:28:56.714  INFO 8364 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-10-28 15:28:56.714  INFO 8364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-28 15:28:56.714  INFO 8364 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-28 15:28:56.714  INFO 8364 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-28 15:28:57.560  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-28 15:28:57.561  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-28 15:28:57.561  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-28 15:28:57.562  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-28 15:28:57.563  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam,java.lang.String) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-28 15:28:57.564  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-28 15:28:57.564  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-28 15:28:57.565  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/teamInfo],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.queryTeamInfo(int)
+2017-10-28 15:28:57.568  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-28 15:28:57.569  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-28 15:28:57.681  INFO 8364 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Sat Oct 28 15:28:54 CST 2017]; root of context hierarchy
+2017-10-28 15:28:58.040  INFO 8364 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5995851e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e84f3c8, org.springframework.security.web.header.HeaderWriterFilter@5b5b59, org.springframework.security.web.authentication.logout.LogoutFilter@17b016ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b2ccba5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ceca2ef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48a2db72, org.springframework.security.web.session.SessionManagementFilter@1280682, org.springframework.security.web.access.ExceptionTranslationFilter@38d08cb5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ef718de]
+2017-10-28 15:28:58.351  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.352  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2017-10-28 15:28:58.353  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-10-28 15:28:58.353  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-28 15:28:58.354  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.354  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-10-28 15:28:58.355  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.355  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-28 15:28:58.356  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.356  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-28 15:28:58.356  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.357  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.357  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.358  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-28 15:28:58.358  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.359  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-10-28 15:28:58.360  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-10-28 15:28:58.360  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.360  INFO 8364 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:28:58.378  INFO 8364 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@4bc59b27, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d7a64ca, org.springframework.security.web.context.SecurityContextPersistenceFilter@6963b88c, org.springframework.security.web.header.HeaderWriterFilter@2fbe26da, org.springframework.web.filter.CorsFilter@76ff68c5, org.springframework.security.web.authentication.logout.LogoutFilter@7c369270, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@24c8d8be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ab24484, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54e43bfe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6418e39e, org.springframework.security.web.session.SessionManagementFilter@4ed15347, org.springframework.security.web.access.ExceptionTranslationFilter@86d6bf7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b98b809]
+2017-10-28 15:28:59.126  INFO 8364 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-28 15:28:59.135  INFO 8364 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-28 15:28:59.234  INFO 8364 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8796 (http)
+2017-10-28 15:28:59.238  INFO 8364 --- [main] c.e.s.c.d.DataCastleApplication          : Started DataCastleApplication in 5.422 seconds (JVM running for 6.137)
+2017-10-28 15:29:28.928  INFO 8364 --- [http-nio-8796-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-28 15:29:28.929  INFO 8364 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-28 15:29:28.949  INFO 8364 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2017-10-28 15:29:28.982  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-28 15:29:28.982  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : 19
+2017-10-28 15:29:28.983  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-28 15:29:28.983  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.queryTeamInfo
+2017-10-28 15:29:28.986  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:29:28.986  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.queryTeamInfoByTeamId
+2017-10-28 15:29:28.986  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 19
+2017-10-28 15:29:28.986  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:29:29.201  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:29:29.202  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : []
+2017-10-28 15:29:29.202  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:29:29.202  INFO 8364 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,[],{}>
+2017-10-28 15:29:35.970  INFO 8364 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-28 15:29:35.970  INFO 8364 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper@1f625eef
+2017-10-28 15:29:35.971  INFO 8364 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-28 15:29:35.971  INFO 8364 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin
+2017-10-28 15:29:36.137  INFO 8364 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,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,{}>
+2017-10-28 15:30:10.698  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-28 15:30:10.698  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@664951d5
+2017-10-28 15:30:10.698  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : arg : 3158a420-42e8-4251-bccf-e7c164ea2511
+2017-10-28 15:30:10.698  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-28 15:30:10.698  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-28 15:30:10.704  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.704  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.userLogin
+2017-10-28 15:30:10.704  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@664951d5
+2017-10-28 15:30:10.704  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : 3158a420-42e8-4251-bccf-e7c164ea2511
+2017-10-28 15:30:10.704  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.710  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.710  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-28 15:30:10.710  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-28 15:30:10.710  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$o/fcfNPJWQE1U.JvGuo8OexwqO0qQiF4.GOMEAMowEPdxwgr7OjcK
+2017-10-28 15:30:10.710  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.810  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.810  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-28 15:30:10.810  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.811  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.811  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-28 15:30:10.811  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : arg : 2ec4cc62-b144-4e06-bdd4-b8aad81cb88d
+2017-10-28 15:30:10.811  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.904  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.904  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$oENjmW.ihADuJOmyhaq5r.Bk3i5Gq3phqigZ2xYJPcG/Xx8fcS7ou
+2017-10-28 15:30:10.904  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.905  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.905  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : service return : cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@2836eb5b
+2017-10-28 15:30:10.905  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:10.906  INFO 8364 --- [http-nio-8796-exec-3] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@2836eb5b,{}>
+2017-10-28 15:30:14.055  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-28 15:30:14.055  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@6039d488
+2017-10-28 15:30:14.055  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : arg : 3158a420-42e8-4251-bccf-e7c164ea2511
+2017-10-28 15:30:14.055  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-28 15:30:14.055  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-28 15:30:14.056  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.056  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.userLogin
+2017-10-28 15:30:14.056  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@6039d488
+2017-10-28 15:30:14.056  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : 3158a420-42e8-4251-bccf-e7c164ea2511
+2017-10-28 15:30:14.057  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.058  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.058  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-28 15:30:14.058  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-28 15:30:14.059  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$o/fcfNPJWQE1U.JvGuo8OexwqO0qQiF4.GOMEAMowEPdxwgr7OjcK
+2017-10-28 15:30:14.059  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.154  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.154  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-28 15:30:14.154  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.155  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.155  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-28 15:30:14.155  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : 448fb84d-67fa-4568-bd7e-5e16543ba753
+2017-10-28 15:30:14.155  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.248  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.248  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$BE4U.8zrifobXDJj5HKowOIrdQ2JJbTZA6NL144xf4EJOQiSAvYE.
+2017-10-28 15:30:14.248  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.249  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.249  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : service return : cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@1e26273f
+2017-10-28 15:30:14.249  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:30:14.250  INFO 8364 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@1e26273f,{}>
+2017-10-28 15:31:30.258  INFO 8364 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@245b4bdc: startup date [Sat Oct 28 15:28:54 CST 2017]; root of context hierarchy
+2017-10-28 15:31:30.260  INFO 8364 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-28 15:31:30.262  INFO 8364 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-10-28 15:31:33.015  INFO 8541 --- [main] c.e.s.c.d.DataCastleApplication          : Starting DataCastleApplication on yang with PID 8541 (/home/yang/idea_work_space/data_castle/out/production/classes started by yang in /home/yang/idea_work_space/data_castle)
+2017-10-28 15:31:33.018  INFO 8541 --- [main] c.e.s.c.d.DataCastleApplication          : No active profile set, falling back to default profiles: default
+2017-10-28 15:31:33.075  INFO 8541 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Sat Oct 28 15:31:33 CST 2017]; root of context hierarchy
+2017-10-28 15:31:34.481  INFO 8541 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-10-28 15:31:35.507  INFO 8541 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8796 (http)
+2017-10-28 15:31:35.515  INFO 8541 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-10-28 15:31:35.516  INFO 8541 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2017-10-28 15:31:35.570  INFO 8541 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-10-28 15:31:35.570  INFO 8541 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2498 ms
+2017-10-28 15:31:35.784  INFO 8541 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2017-10-28 15:31:35.784  INFO 8541 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-10-28 15:31:35.785  INFO 8541 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2017-10-28 15:31:35.785  INFO 8541 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2017-10-28 15:31:35.785  INFO 8541 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2017-10-28 15:31:35.786  INFO 8541 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-10-28 15:31:36.497  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signUp],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userRegister(cn.edu.swpu.cins.data_castle.entity.dto.SignUp,java.lang.String) throws javax.mail.MessagingException
+2017-10-28 15:31:36.498  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/verifyCode],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.getVerifyCodeForLogin(javax.servlet.http.HttpServletResponse)
+2017-10-28 15:31:36.499  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/signIn],methods=[POST]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin(cn.edu.swpu.cins.data_castle.entity.dto.SignInUser,java.lang.String)
+2017-10-28 15:31:36.499  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/user/enable],methods=[GET]}" onto public org.springframework.http.ResponseEntity cn.edu.swpu.cins.data_castle.controller.AuthController.userEnable(java.lang.String,java.lang.String)
+2017-10-28 15:31:36.500  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/team],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.createTeam(cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam,java.lang.String) throws cn.edu.swpu.cins.data_castle.exception.MatchException
+2017-10-28 15:31:36.501  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/answer],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.uploadFile(java.lang.String,org.springframework.web.multipart.MultipartFile)
+2017-10-28 15:31:36.501  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/rankList],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.getRankList()
+2017-10-28 15:31:36.501  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/dataCastle/match/teamInfo],methods=[GET]}" onto public org.springframework.http.ResponseEntity<?> cn.edu.swpu.cins.data_castle.controller.MatchController.queryTeamInfo(int)
+2017-10-28 15:31:36.504  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-28 15:31:36.505  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-28 15:31:36.602  INFO 8541 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Sat Oct 28 15:31:33 CST 2017]; root of context hierarchy
+2017-10-28 15:31:36.950  INFO 8541 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41ef1ea2, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d299393, org.springframework.security.web.header.HeaderWriterFilter@173f1614, org.springframework.security.web.authentication.logout.LogoutFilter@21c747a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b4d4327, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ef718de, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dfe23e8, org.springframework.security.web.session.SessionManagementFilter@5426cb36, org.springframework.security.web.access.ExceptionTranslationFilter@479ac2cb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c33e528]
+2017-10-28 15:31:37.209  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2017-10-28 15:31:37.209  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.210  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/logfile || /logfile.json],methods=[GET || HEAD]}" onto public void org.springframework.boot.actuate.endpoint.mvc.LogFileMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws javax.servlet.ServletException,java.io.IOException
+2017-10-28 15:31:37.210  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.211  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/shutdown || /shutdown.json],methods=[POST],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.ShutdownMvcEndpoint.invoke()
+2017-10-28 15:31:37.211  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.212  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.212  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2017-10-28 15:31:37.212  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.213  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.213  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+2017-10-28 15:31:37.215  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+2017-10-28 15:31:37.215  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+2017-10-28 15:31:37.215  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.216  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+2017-10-28 15:31:37.216  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+2017-10-28 15:31:37.217  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.217  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.218  INFO 8541 --- [main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2017-10-28 15:31:37.227  INFO 8541 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.boot.actuate.autoconfigure.ManagementWebSecurityAutoConfiguration$LazyEndpointPathRequestMatcher@691500ab, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3db432c2, org.springframework.security.web.context.SecurityContextPersistenceFilter@62765aec, org.springframework.security.web.header.HeaderWriterFilter@50b0afd7, org.springframework.web.filter.CorsFilter@34414ffc, org.springframework.security.web.authentication.logout.LogoutFilter@16132f21, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@67cffead, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f5bd362, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3a401749, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1903b5d, org.springframework.security.web.session.SessionManagementFilter@468173fa, org.springframework.security.web.access.ExceptionTranslationFilter@75cf0de5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4207852d]
+2017-10-28 15:31:37.904  INFO 8541 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-10-28 15:31:37.912  INFO 8541 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-10-28 15:31:37.985  INFO 8541 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8796 (http)
+2017-10-28 15:31:37.990  INFO 8541 --- [main] c.e.s.c.d.DataCastleApplication          : Started DataCastleApplication in 5.32 seconds (JVM running for 5.822)
+2017-10-28 15:31:41.060  INFO 8541 --- [http-nio-8796-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-28 15:31:41.061  INFO 8541 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-10-28 15:31:41.086  INFO 8541 --- [http-nio-8796-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2017-10-28 15:31:41.172  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-28 15:31:41.172  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@639a7ee7
+2017-10-28 15:31:41.173  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : arg : 3158a420-42e8-4251-bccf-e7c164ea2511
+2017-10-28 15:31:41.173  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-28 15:31:41.174  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-28 15:31:41.354  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.354  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.userLogin
+2017-10-28 15:31:41.354  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@639a7ee7
+2017-10-28 15:31:41.354  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 3158a420-42e8-4251-bccf-e7c164ea2511
+2017-10-28 15:31:41.354  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.378  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.378  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-28 15:31:41.378  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-28 15:31:41.378  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$o/fcfNPJWQE1U.JvGuo8OexwqO0qQiF4.GOMEAMowEPdxwgr7OjcK
+2017-10-28 15:31:41.378  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.479  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.479  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-28 15:31:41.479  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.480  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.480  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-28 15:31:41.481  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : arg : eab37daa-dcf9-4d75-9475-5ce14163ba30
+2017-10-28 15:31:41.481  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.575  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.576  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$K2mo8seFmIT1xoj9lOerKeS9ASCA9jd8ss6ydqBbsuzfoee6.OmKK
+2017-10-28 15:31:41.576  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.576  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.576  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : service return : cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@35afee46
+2017-10-28 15:31:41.576  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:41.577  INFO 8541 --- [http-nio-8796-exec-1] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@35afee46,{}>
+2017-10-28 15:31:57.235  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-28 15:31:57.235  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@a6d3036
+2017-10-28 15:31:57.235  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : arg : 3158a420-42e8-4251-bccf-e7c164ea2511
+2017-10-28 15:31:57.235  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-28 15:31:57.235  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.AuthController.userLogin
+2017-10-28 15:31:57.237  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.237  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.UserServiceImpl.userLogin
+2017-10-28 15:31:57.238  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : cn.edu.swpu.cins.data_castle.entity.dto.SignInUser@a6d3036
+2017-10-28 15:31:57.238  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 3158a420-42e8-4251-bccf-e7c164ea2511
+2017-10-28 15:31:57.238  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.243  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.243  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.match
+2017-10-28 15:31:57.243  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : 1234
+2017-10-28 15:31:57.243  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : $2a$10$o/fcfNPJWQE1U.JvGuo8OexwqO0qQiF4.GOMEAMowEPdxwgr7OjcK
+2017-10-28 15:31:57.243  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.345  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.345  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : service return : true
+2017-10-28 15:31:57.345  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.345  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.345  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.PasswordEncoderServiceImpl.encode
+2017-10-28 15:31:57.346  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : arg : ec606cf2-d397-49d8-8025-df0ea9e0516b
+2017-10-28 15:31:57.346  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.442  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.442  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : service return : $2a$10$HsxdPhzmUJ4PZxVNegsF1.sHQSJeepF8BZhdgx8OrDvsegcpe/AmG
+2017-10-28 15:31:57.442  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.443  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.443  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : service return : cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@1169fe95
+2017-10-28 15:31:57.443  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:31:57.445  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@1169fe95,{}>
