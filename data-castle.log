@@ -15717,3 +15717,19 @@ NBUWGsqcqrpGqwXFwZ8yw12NlKlUDncNFt8PUrD+DZSr4uxzGdwqAAAAAElFTkSuQmCC,{}>
 2017-10-28 15:31:57.443  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ServiceLogger           : 
 
 2017-10-28 15:31:57.445  INFO 8541 --- [http-nio-8796-exec-2] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,cn.edu.swpu.cins.data_castle.entity.dto.UserSignResult@1169fe95,{}>
+2017-10-28 15:33:38.579  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller aspect beginning
+2017-10-28 15:33:38.580  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : arg : 12
+2017-10-28 15:33:38.580  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : aspect finishing
+2017-10-28 15:33:38.580  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : calling cn.edu.swpu.cins.data_castle.controller.MatchController.queryTeamInfo
+2017-10-28 15:33:38.582  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:33:38.583  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : calling : cn.edu.swpu.cins.data_castle.service.Impl.MatchServiceImpl.queryTeamInfoByTeamId
+2017-10-28 15:33:38.583  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : arg : 12
+2017-10-28 15:33:38.583  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:33:38.589  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:33:38.590  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : service return : [TeamUserInfo(teamName=null, username=木易, mail=879604213@qq.com, schoolNumber=201531060587, maxScore=0.0, lastScore=0.0)]
+2017-10-28 15:33:38.590  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ServiceLogger           : 
+
+2017-10-28 15:33:38.591  INFO 8541 --- [http-nio-8796-exec-4] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,[TeamUserInfo(teamName=null, username=木易, mail=879604213@qq.com, schoolNumber=201531060587, maxScore=0.0, lastScore=0.0)],{}>
