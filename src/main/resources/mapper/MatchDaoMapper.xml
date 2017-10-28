@@ -28,4 +28,14 @@
         WHERE
         team_name=#{teamName}
     </select>
+
+    <select id="selectByTeamId" parameterType="int" resultType="cn.edu.swpu.cins.data_castle.entity.dto.TeamUserInfo">
+        SELECT
+        username,mail,school_number AS schoolNumber,
+        (SELECT t.team_name FROM team_info AS t WHERE t.id=#{teamId}) AS teamName,
+        (SELECT r.max_score FROM ranking AS r WHERE r.t_id=#{teamId}) AS maxScore,
+        (SELECT r2.last_score FROM ranking AS r2 WHERE r2.t_id=#{teamId}) AS lastScore
+        FROM user_info AS u WHERE  u.t_id=#{teamId}
+
+    </select>
 </mapper>

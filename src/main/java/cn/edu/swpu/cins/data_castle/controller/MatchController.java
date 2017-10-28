@@ -2,9 +2,11 @@ package cn.edu.swpu.cins.data_castle.controller;
 
 import cn.edu.swpu.cins.data_castle.entity.dto.ExceptionResult;
 import cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam;
+import cn.edu.swpu.cins.data_castle.entity.dto.TeamUserInfo;
 import cn.edu.swpu.cins.data_castle.enums.MatchEnum;
 import cn.edu.swpu.cins.data_castle.exception.DataCastleException;
 import cn.edu.swpu.cins.data_castle.exception.MatchException;
+import cn.edu.swpu.cins.data_castle.exception.UserException;
 import cn.edu.swpu.cins.data_castle.service.MatchService;
 import cn.edu.swpu.cins.data_castle.utils.JedisAdapter;
 import lombok.AllArgsConstructor;
@@ -12,6 +14,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("dataCastle/match")
@@ -45,6 +49,16 @@ public class MatchController {
     public ResponseEntity<?> getRankList() {
         try {
             return new ResponseEntity<>(matchService.queryRankList(), HttpStatus.OK);
+        } catch (DataCastleException e) {
+            return new ResponseEntity<>(new ExceptionResult(e.getMessage()), e.getStatus());
+        }
+    }
+
+    @GetMapping("teamInfo")
+    public ResponseEntity<?> queryTeamInfo(@RequestHeader("teamId") int teamId) {
+        try {
+            List<TeamUserInfo> teamUserInfoList = matchService.queryTeamInfoByTeamId(teamId);
+            return new ResponseEntity<>(teamUserInfoList, HttpStatus.OK);
         } catch (DataCastleException e) {
             return new ResponseEntity<>(new ExceptionResult(e.getMessage()), e.getStatus());
         }

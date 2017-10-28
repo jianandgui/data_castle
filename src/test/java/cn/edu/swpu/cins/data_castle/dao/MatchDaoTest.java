@@ -29,4 +29,10 @@ public class MatchDaoTest {
 
     }
 
+    @Test
+    public void selectByTeamId() throws Exception{
+        System.out.println(matchDao.selectByTeamId(19));
+    }
+
+
 }

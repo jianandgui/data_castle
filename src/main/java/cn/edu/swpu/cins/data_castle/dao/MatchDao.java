@@ -1,5 +1,6 @@
 package cn.edu.swpu.cins.data_castle.dao;
 
+import cn.edu.swpu.cins.data_castle.entity.dto.TeamUserInfo;
 import cn.edu.swpu.cins.data_castle.entity.persistence.Ranking;
 import cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo;
 import org.apache.ibatis.annotations.Mapper;
@@ -21,6 +22,6 @@ public interface MatchDao {
 
     TeamInfo selectByName(String teamName);
 
-
+    List<TeamUserInfo> selectByTeamId(int teamId);
 
 }

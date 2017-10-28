@@ -4,6 +4,7 @@ import cn.edu.swpu.cins.data_castle.dao.MatchDao;
 import cn.edu.swpu.cins.data_castle.dao.UserDao;
 import cn.edu.swpu.cins.data_castle.entity.dto.MatchTeam;
 import cn.edu.swpu.cins.data_castle.entity.dto.RankList;
+import cn.edu.swpu.cins.data_castle.entity.dto.TeamUserInfo;
 import cn.edu.swpu.cins.data_castle.entity.persistence.Ranking;
 import cn.edu.swpu.cins.data_castle.entity.persistence.TeamInfo;
 import cn.edu.swpu.cins.data_castle.entity.persistence.UserInfo;
@@ -193,10 +194,18 @@ public class MatchServiceImpl implements MatchService {
         return rankLists;
     }
 
+    @Override
+    public List<TeamUserInfo> queryTeamInfoByTeamId(int teamId) throws UserException {
+        List<TeamUserInfo> teamUserInfoList = marchDao.selectByTeamId(teamId);
+        return teamUserInfoList;
+    }
+
     public List<RankList> getRankList(List<Ranking> rankingList) {
         return rankingList.stream()
                 .map(RankList::new)
                 .sorted(Comparator.comparing(RankList::getMaxScore).reversed())
                 .collect(Collectors.toList());
     }
+
+
 }
