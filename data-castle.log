@@ -15298,3 +15298,6 @@ jI5W864HnQRrugNW9E4vzwx3y+EeS/EMd9fhbsAK1oMMrH8D5EDGIbPs3HAAAAAASUVORK5CYII=,{}>
 2017-10-28 11:35:49.906  INFO 6499 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ServiceLogger           : 
 
 2017-10-28 11:35:49.906  INFO 6499 --- [http-nio-8796-exec-6] c.e.s.c.d.aspect.ControllerAspecter      : controller return <200 OK,[TeamUserInfo(teamName=测试, username=木易, mail=879604213@qq.com, schoolNumber=201531060587, maxScore=97.0, lastScore=34.0), TeamUserInfo(teamName=测试, username=老付, mail=yangquan95@163.com, schoolNumber=201531060589, maxScore=97.0, lastScore=34.0)],{}>
+2017-10-28 11:38:20.888  INFO 6499 --- [Thread-6] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6c64cb25: startup date [Sat Oct 28 11:32:04 CST 2017]; root of context hierarchy
+2017-10-28 11:38:20.890  INFO 6499 --- [Thread-6] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2017-10-28 11:38:20.892  INFO 6499 --- [Thread-6] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
