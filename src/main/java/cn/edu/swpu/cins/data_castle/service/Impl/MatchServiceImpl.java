@@ -61,11 +61,11 @@ public class MatchServiceImpl implements MatchService {
         checkCreateTeam(matchTeam);
         TeamInfo teamInfo = new TeamInfo();
         teamInfo.setTeamName(teamName);
-        checkTeamSaveToDB(teamInfo, mails);
-        return 1;
+        int teamId=checkTeamSaveToDB(teamInfo, mails);
+        return teamId;
     }
 
-    public void checkTeamSaveToDB(TeamInfo teamInfo,List<String> mails) throws MatchException {
+    public int checkTeamSaveToDB(TeamInfo teamInfo,List<String> mails) throws MatchException {
         marchDao.saveTeam(teamInfo);
         int teamId = teamInfo.getId();
         if (teamId == 0) {
@@ -78,6 +78,7 @@ public class MatchServiceImpl implements MatchService {
         if (modCount != mails.size()) {
             throw new MatchException(ExceptionEnum.INTERNAL_ERROR.getMsg(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
+        return teamId;
     }
 
     public void checkCreateTeam(MatchTeam matchTeam) throws MatchException {
